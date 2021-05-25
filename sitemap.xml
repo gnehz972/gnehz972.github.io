@@ -44,13 +44,6 @@
   </url>
   
   <url>
-    <loc>https://ficusvirens.com/posts/58ea93b5/</loc>
-    
-    <lastmod>2020-04-12</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ficusvirens.com/posts/ec789f13/</loc>
     
     <lastmod>2020-04-12</lastmod>
@@ -58,7 +51,7 @@
   </url>
   
   <url>
-    <loc>https://ficusvirens.com/posts/85408c5b/</loc>
+    <loc>https://ficusvirens.com/posts/58ea93b5/</loc>
     
     <lastmod>2020-04-12</lastmod>
     
@@ -66,6 +59,13 @@
   
   <url>
     <loc>https://ficusvirens.com/posts/8342713/</loc>
+    
+    <lastmod>2020-04-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/posts/85408c5b/</loc>
     
     <lastmod>2020-04-12</lastmod>
     
@@ -109,13 +109,6 @@
   </url>
   
   <url>
-    <loc>https://ficusvirens.com/tags/vim/</loc>
-    <lastmod>2021-05-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ficusvirens.com/tags/kotlin/</loc>
     <lastmod>2021-05-25</lastmod>
     <changefreq>daily</changefreq>
@@ -131,6 +124,34 @@
   
   <url>
     <loc>https://ficusvirens.com/tags/kotlin-coroutine/</loc>
+    <lastmod>2021-05-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/tags/%E9%BB%98%E8%AE%A4/</loc>
+    <lastmod>2021-05-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/tags/vim/</loc>
+    <lastmod>2021-05-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/tags/flutter/</loc>
+    <lastmod>2021-05-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/tags/dart/</loc>
     <lastmod>2021-05-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -158,20 +179,6 @@
   </url>
   
   <url>
-    <loc>https://ficusvirens.com/tags/flutter/</loc>
-    <lastmod>2021-05-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ficusvirens.com/tags/dart/</loc>
-    <lastmod>2021-05-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ficusvirens.com/tags/%E5%88%B7%E6%9C%BA/</loc>
     <lastmod>2021-05-25</lastmod>
     <changefreq>daily</changefreq>
@@ -180,13 +187,6 @@
   
   <url>
     <loc>https://ficusvirens.com/tags/aosp/</loc>
-    <lastmod>2021-05-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ficusvirens.com/tags/%E9%BB%98%E8%AE%A4/</loc>
     <lastmod>2021-05-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -209,6 +209,13 @@
   </url>
   
   <url>
+    <loc>https://ficusvirens.com/categories/%E9%BB%98%E8%AE%A4/</loc>
+    <lastmod>2021-05-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ficusvirens.com/categories/flutter/</loc>
     <lastmod>2021-05-25</lastmod>
     <changefreq>daily</changefreq>
@@ -217,13 +224,6 @@
   
   <url>
     <loc>https://ficusvirens.com/categories/android/</loc>
-    <lastmod>2021-05-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ficusvirens.com/categories/%E9%BB%98%E8%AE%A4/</loc>
     <lastmod>2021-05-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
