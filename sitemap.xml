@@ -2,9 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ficusvirens.com/posts/85408c5b/</loc>
+    
+    <lastmod>2021-05-25</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ficusvirens.com/posts/f0a01d0/</loc>
     
-    <lastmod>2021-05-24</lastmod>
+    <lastmod>2021-05-25</lastmod>
     
   </url>
   
@@ -59,13 +66,6 @@
   
   <url>
     <loc>https://ficusvirens.com/posts/8342713/</loc>
-    
-    <lastmod>2020-04-12</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ficusvirens.com/posts/85408c5b/</loc>
     
     <lastmod>2020-04-12</lastmod>
     
@@ -130,13 +130,6 @@
   </url>
   
   <url>
-    <loc>https://ficusvirens.com/tags/%E9%BB%98%E8%AE%A4/</loc>
-    <lastmod>2021-05-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ficusvirens.com/tags/vim/</loc>
     <lastmod>2021-05-25</lastmod>
     <changefreq>daily</changefreq>
@@ -192,6 +185,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://ficusvirens.com/tags/Jetpack-Compose/</loc>
+    <lastmod>2021-05-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -209,13 +209,6 @@
   </url>
   
   <url>
-    <loc>https://ficusvirens.com/categories/%E9%BB%98%E8%AE%A4/</loc>
-    <lastmod>2021-05-25</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ficusvirens.com/categories/flutter/</loc>
     <lastmod>2021-05-25</lastmod>
     <changefreq>daily</changefreq>
@@ -224,6 +217,13 @@
   
   <url>
     <loc>https://ficusvirens.com/categories/android/</loc>
+    <lastmod>2021-05-25</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/categories/Android/</loc>
     <lastmod>2021-05-25</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
