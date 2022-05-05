@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;ficusvirens.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}</script>
+<meta name="description" content="最近想研究下竞品app的页面，想在真机上使用hierarchyviewer工具看看，再dump数据库看看(刚升级sdk build tool到28，hierarchyviewer已经被移除了。。老实用studio上的view inspector吧)。竞品是release包，手上也没有root机器，怎么办呢，想起以前debug开发机的便利，果断刷机。手上正好有个nexus 6p，完全可以自己编译ao">
+<meta property="og:type" content="article">
+<meta property="og:title" content="编译aosp源码，刷user-debug开发机之nexus 6p">
+<meta property="og:url" content="https://ficusvirens.com/posts/c3525f2d/index.html">
+<meta property="og:site_name" content="gnehz972">
+<meta property="og:description" content="最近想研究下竞品app的页面，想在真机上使用hierarchyviewer工具看看，再dump数据库看看(刚升级sdk build tool到28，hierarchyviewer已经被移除了。。老实用studio上的view inspector吧)。竞品是release包，手上也没有root机器，怎么办呢，想起以前debug开发机的便利，果断刷机。手上正好有个nexus 6p，完全可以自己编译ao">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-01-01T07:28:46.000Z">
+<meta property="article:modified_time" content="2022-05-05T13:39:07.268Z">
+<meta property="article:author" content="gnehz972">
+<meta property="article:tag" content="刷机">
+<meta property="article:tag" content="aosp">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ficusvirens.com/posts/c3525f2d/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;ficusvirens.com&#x2F;posts&#x2F;c3525f2d&#x2F;&quot;,&quot;path&quot;:&quot;posts&#x2F;c3525f2d&#x2F;&quot;,&quot;title&quot;:&quot;编译aosp源码，刷user-debug开发机之nexus 6p&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>编译aosp源码，刷user-debug开发机之nexus 6p | gnehz972</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="gnehz972" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">gnehz972</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%97%AE%E9%A2%98"><span class="nav-number">3.</span> <span class="nav-text">问题</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">gnehz972</p>
+  <div class="site-description" itemprop="description">Android, Python, H5 technology study and share</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ficusvirens.com/posts/c3525f2d/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gnehz972">
+      <meta itemprop="description" content="Android, Python, H5 technology study and share">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gnehz972">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          编译aosp源码，刷user-debug开发机之nexus 6p
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-01-01 15:28:46" itemprop="dateCreated datePublished" datetime="2019-01-01T15:28:46+08:00">2019-01-01</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-05-05 21:39:07" itemprop="dateModified" datetime="2022-05-05T21:39:07+08:00">2022-05-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/android/" itemprop="url" rel="index"><span itemprop="name">android</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>最近想研究下竞品app的页面，想在真机上使用hierarchyviewer工具看看，再dump数据库看看(刚升级sdk build tool到28，hierarchyviewer已经被移除了。。老实用studio上的view inspector吧)。竞品是release包，手上也没有root机器，怎么办呢，想起以前debug开发机的便利，果断刷机。手上正好有个nexus 6p，完全可以自己编译aosp源码，刷个user-debug的开发机。系统都可以debug，装在上面app就随便揉捏了。</p>
+<span id="more"></span>
+
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ol>
+<li>Ubuntu 18.04.1 LTS   </li>
+<li>笔记本(4核i5,8G内存，256G ssd)预留空余磁盘160G以上，源码加编译结果占用了148G，open-jdk8环境</li>
+<li>手机nexus 6p (angler)  </li>
+<li>访问google的能力  <a target="_blank" rel="noopener" href="https://source.android.com/setup/build/requirements">https://source.android.com/setup/build/requirements</a></li>
+</ol>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
+<li><p>下载repo<br><a target="_blank" rel="noopener" href="https://source.android.com/setup/build/downloading">https://source.android.com/setup/build/downloading</a></p>
+</li>
+<li><p>下载源码<br>注意手机支持的分支,直接检出  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">repo init -u https://android.googlesource.com/platform/manifest -b android-8.1.0_r47</span><br><span class="line">repo sync -j4</span><br></pre></td></tr></table></figure>
+<p>  查看repo当前检出分支<br>  git –git-dir .repo&#x2F;manifests&#x2F;.git&#x2F; branch -a<br>  失败了不要紧，重新sync就好，之前下载的有缓存不会重头开始的</p>
+</li>
+<li><p>下二进制文件（vendor的驱动）<br>注意驱动对应的build number，而build bumber和之前检出的分支对应 <strong>OPM7.181005.003	android-8.1.0_r47</strong><br>对应关系查看<a target="_blank" rel="noopener" href="https://source.android.com/setup/start/build-numbers">https://source.android.com/setup/start/build-numbers</a><br>华为的和高通的两个文件都要下载 解压后运行对应的sh文件，会在aosp的根目录生成vendor目录<br>下载地址：<a target="_blank" rel="noopener" href="https://developers.google.com/android/drivers">https://developers.google.com/android/drivers</a></p>
+</li>
+<li><p>改环境,使用openjdk</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 </span><br><span class="line">export JRE_HOME=$JAVA_HOME/jre </span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib </span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH </span><br><span class="line">export LC_ALL=C</span><br></pre></td></tr></table></figure></li>
+<li><p>编译源码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">build/envsetup.sh </span><br><span class="line">lunch aosp_angler-userdebug </span><br><span class="line">make -j4</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>刷机 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export ANDROID_PRODUCT_OUT=your-aosp-path/out/target/product/angler </span><br><span class="line">fastboot flashall -w</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
+<li><p>ninja: build stopped: subcommand failed ninja failed with: exit status 1<br>解决：可能是本地环境问题 export LC_ALL&#x3D;C<br>ref：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/51324238/aosp-build-stopped-subcommand-failedhttps://www.programering.com/a/MDM3UzNwATQ.html">https://stackoverflow.com/questions/51324238/aosp-build-stopped-subcommand-failedhttps://www.programering.com/a/MDM3UzNwATQ.html</a> </p>
+<blockquote>
+<p>LC_ALL&#x3D;C is to remove all localized settings, make the correct execution.</p>
+</blockquote>
+</li>
+<li><p>&#x2F;bin&#x2F;bash: xmllint: command not found<br>解决：安装xmllint </p>
+<blockquote>
+<p>sudo apt-get install libxml2-utils</p>
+</blockquote>
+</li>
+<li><p>Build with Jack …. Out of memory error GC overhead limit exceeded. Try increasing heap size with java option ‘-Xmx’.<br>解决：修改jack-server的配置文件ref：<a target="_blank" rel="noopener" href="http://www.2net.co.uk/blog/jack-server.html">http://www.2net.co.uk/blog/jack-server.html</a></p>
+<blockquote>
+<p>vim ~&#x2F;.jack-settings<br>添加一行：<br>JACK_SERVER_VM_ARGUMENTS&#x3D;”-Dfile.encoding&#x3D;UTF-8 -XX:+TieredCompilation -Xmx4096m”<br>重启下jack-server:<br>prebuilts&#x2F;sdk&#x2F;tools&#x2F;jack-admin kill-server<br>prebuilts&#x2F;sdk&#x2F;tools&#x2F;jack-admin start-server</p>
+</blockquote>
+</li>
+<li><p>flash完后不断重启<br>可能原因:</p>
+<ul>
+<li>binary文件只下了一个 </li>
+<li>没有下载对应build numer的binary文件 </li>
+<li>编译因为错误中断过，继续编译引起的<br>解决：<br>可能某些中间文件不完全或受损，把out文件夹删掉后再整编一次</li>
+</ul>
+</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%88%B7%E6%9C%BA/" rel="tag"># 刷机</a>
+              <a href="/tags/aosp/" rel="tag"># aosp</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/ec789f13/" rel="prev" title="kotlin coroutines学习摘要">
+                  <i class="fa fa-chevron-left"></i> kotlin coroutines学习摘要
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/8342713/" rel="next" title="极简Flutter学习笔记">
+                  极简Flutter学习笔记 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">gnehz972</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>gnehz972</title>
+  
+  
+  <link href="https://ficusvirens.com/atom.xml" rel="self"/>
+  
+  <link href="https://ficusvirens.com/"/>
+  <updated>2022-05-05T13:39:07.265Z</updated>
+  <id>https://ficusvirens.com/</id>
+  
+  <author>
+    <name>gnehz972</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Jetpack Compose概览</title>
+    <link href="https://ficusvirens.com/posts/f0a01d0/"/>
+    <id>https://ficusvirens.com/posts/f0a01d0/</id>
+    <published>2021-05-24T14:28:47.000Z</published>
+    <updated>2022-05-05T13:39:07.265Z</updated>
+    
+    <content type="html"><![CDATA[<p>Jetpack Compose是Google在2019年推出的一个现代化UI框架，最近终于进入beta阶段，Google I&#x2F;O 2021透露将在7月发布稳定版。对标iOS Swift UI，可以预见安卓UI开发方式也将迎来巨变，是时候调研一波了。</p><span id="more"></span><h3 id="第一印象"><a href="#第一印象" class="headerlink" title="第一印象"></a>第一印象</h3><p><img src="/posts/f0a01d0/jetpack_compose_sample.png"><br>以上是官网首页的代码片段，用一个方法实现了一个带图片和动画的卡片。满满的flutter&#x2F;swift UI既视感，熟悉的嵌套，熟悉的kotlin的lambda表达式，第一印象，熟悉，简洁！</p><p>再一看，几行代码涵盖了layout，style，animation，image asset，state处理这些UI基本元素，UI用到的元素都有了，可以实战了。框架完成度，高！</p><p>把一个Kotlin方法加上@Composable注解，就是一个compose方法了。多个compose方法嵌套组合下，就可以实现复杂的UI，compose&#x3D;组合。注解隐藏了实现细节，使用者可以更加focus在UI本身的实现上了。</p><h3 id="Pros"><a href="#Pros" class="headerlink" title="Pros"></a>Pros</h3><ul><li>Declarative programing，声明式的写法，学过React&#x2F;Flutter&#x2F;Swift UI的同学应该很熟悉。Learn once，apply everywhere，棒！(其实Android的databinding框架，已经让我们体验了类似的写法。单独看xml layout，这是是一个declarative的ui，描述了页面的样式，databinding注入状态，状态变化时会触发UI更新。从结果看就是一种declarative programing的写法(伪。。)</li><li>基于Kotlin，pure code UI implementation。Kotlin的语法糖还是很香的。没有了koltin&#x2F;java+xml ui，ui代码全部用kotlin code实现，降低了复杂度。同样的，UI规则更加纯粹，相信以后机器就可以更好的自动生成UI代码了。参考Adobe xd的flutter插件，设计⇒代码，so easy！</li><li>Open source，吸收各方优点。当然，闭源的swift ui搞的也不错，目前进度和质量都领先于compose，已经是生产环境新APP的UI标配了。</li><li>Multi-platform<ul><li><a href="https://www.jetbrains.com/lp/compose/">Compse for Desktop</a></li><li><a href="https://compose-web.ui.pages.jetbrains.team/">Compose for Web</a></li></ul></li><li>View interop, 可以在原有的view里包裹compose，也可以在compose中嵌套原来的view。同样的，UI之外的框架也可以复用，比如viewmodel，livedata，coroutines。老项目也可以使用最新的UI框架，兼容性高。</li><li>Decouple from OS, 对android系统版本没有要求，而swift UI需要iOS 13+系统要求。意味着我们用compose写的代码可以运行在任意版本的android系统上。</li></ul><h3 id="Cons"><a href="#Cons" class="headerlink" title="Cons"></a>Cons</h3><ul><li>Performance concern：compose方法可能会调用很频繁，最频繁的时候没一帧都会调用。这中间可能会有很多的计算，也可能会有很多中间调用产生的小对象。参考flutter widget，这些对象回收可能会产生额外的耗费。</li><li>UI组件少：全新的UI框架，原生和三方的UI组件都很欠缺，成熟度还有待考证。</li><li>嵌套问题：复杂UI页面，UI嵌套不可避免，嵌套的代码需要很好的组织和管理，可以从flutter，react吸取点经验。</li></ul><h3 id="TLDR"><a href="#TLDR" class="headerlink" title="TLDR"></a>TLDR</h3><ul><li>基于kotlin，和原生view和框架可以无缝对接。  </li><li>一个跨平台（Android&#x2F;Web&#x2F;Desktop）UI框架。  </li><li>一个开源的，吸取众家之长的UI框架，值得期待。</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Jetpack Compose是Google在2019年推出的一个现代化UI框架，最近终于进入beta阶段，Google I&amp;#x2F;O 2021透露将在7月发布稳定版。对标iOS Swift UI，可以预见安卓UI开发方式也将迎来巨变，是时候调研一波了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Android" scheme="https://ficusvirens.com/categories/Android/"/>
+    
+    
+    <category term="Android" scheme="https://ficusvirens.com/tags/Android/"/>
+    
+    <category term="Jetpack Compose" scheme="https://ficusvirens.com/tags/Jetpack-Compose/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>极简Flutter学习笔记</title>
+    <link href="https://ficusvirens.com/posts/8342713/"/>
+    <id>https://ficusvirens.com/posts/8342713/</id>
+    <published>2019-03-13T13:13:24.000Z</published>
+    <updated>2022-05-05T13:39:07.267Z</updated>
+    
+    <content type="html"><![CDATA[<p>极简flutter学习笔记</p><span id="more"></span><h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol><li>支持热更新（hotfix，打patch）吗 <a href="https://github.com/flutter/flutter/issues/14330">issue</a></li><li>AndroidX support <a href="https://github.com/flutter/flutter/issues/23586">issue</a></li></ol><h2 id="下载安装flutter-sdk，配置环境变量"><a href="#下载安装flutter-sdk，配置环境变量" class="headerlink" title="下载安装flutter sdk，配置环境变量"></a>下载安装flutter sdk，配置环境变量</h2><ol><li>下载解压flutter sdk，将对应bin目录（xxx&#x2F;flutter&#x2F;bin）加入PATH环境变量</li><li>有android开发环境：android sdk（加入PATH环境变量），android studio，android真机或模拟器</li><li>验证命令：<ul><li>验证：flutter docter(如果没反应，应该是网络问题，终端设置代理到外面就好)  </li><li>升级：flutter upgrade   </li><li>查看版本：flutter –version</li></ul></li><li>android studio：安装Dart和Flutter插件，重启，创建flutter应用，run，hot reload <a href="https://flutter.dev/docs/development/tools/android-studio">链接</a></li><li>vscode：安装Dart和Flutter扩展,创建应用（Ctrl+Shift+P查看-&gt;命令面板-&gt;Flutter:New Project）,run（Shift+F9）,hot reload <a href="https://flutter.dev/docs/development/tools/vs-code">链接</a></li><li><a href="https://flutter.dev/docs/get-started/install/linux">官方链接</a></li></ol><h2 id="在现有的native-app里集成flutter组件"><a href="#在现有的native-app里集成flutter组件" class="headerlink" title="在现有的native app里集成flutter组件"></a>在现有的native app里集成flutter组件</h2><ol><li>app主体部分是native开发，部分feature采用flutter，见闲鱼的详情页</li><li>flutter sdk提供FlutterFragment，里面包含一个FlutterView，flutter代码就跑在这个容器里</li><li>native客户端传一个String类型的route到flutter组件，flutter组件的main入口处理分发，以导航到flutter实现的不同页面</li><li>native和flutter相互调用，传值  <a href="https://medium.com/flutter-io/flutter-platform-channels-ce7f540a104e">链接</a><ul><li>MethodChannel 方法直接调用，双向</li><li>EventChannel 事件监听，native发，flutter收</li></ul></li><li><a href="https://github.com/flutter/flutter/wiki/Add-Flutter-to-existing-apps">官方链接</a></li></ol><h2 id="dart基础语法学习"><a href="#dart基础语法学习" class="headerlink" title="dart基础语法学习"></a>dart基础语法学习</h2><ul><li><a href="http://dart.goodev.org/guides/language/language-tour">链接</a></li></ul><h2 id="工程基本结构，yaml配置构建"><a href="#工程基本结构，yaml配置构建" class="headerlink" title="工程基本结构，yaml配置构建"></a>工程基本结构，yaml配置构建</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">├── android  //生成的android包装工程</span><br><span class="line">├── build   //编译中间文件存放位置</span><br><span class="line">├── ios    //生成的ios包装工程</span><br><span class="line">├── lib</span><br><span class="line">│   ├── main.dart  //flutter程序入口</span><br><span class="line">│   └── second.dart</span><br><span class="line">├── pubspec.lock   //解析包依赖配置文件后，将满足条件的包依赖存放在该文件，工程实际上使用的该文件内容里的配置</span><br><span class="line">├── pubspec.yaml   //包依赖配置文件，三方包放dependencies下面</span><br><span class="line">├── README.md</span><br><span class="line">└── test</span><br><span class="line">    └── widget_test.dart</span><br></pre></td></tr></table></figure><h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul><li><input disabled="" type="checkbox"> flutter里log及debug方式</li><li><input disabled="" type="checkbox"> widget原理及使用，自定义widget</li><li><input disabled="" type="checkbox"> 应用及组件生命周期</li><li><input disabled="" type="checkbox"> 页面绘制流程</li><li><input disabled="" type="checkbox"> 触屏事件分发流程</li><li><input disabled="" type="checkbox"> 常用导航，布局ui组件</li><li><input disabled="" type="checkbox"> flutter动画</li><li><input disabled="" type="checkbox"> 页面路由框架</li><li><input disabled="" type="checkbox"> 图片框架，网络框架，持久化框架，序列化框架</li><li><input disabled="" type="checkbox"> 工程化管理框架，开发范式</li></ul><h2 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h2><ul><li><a href="https://github.com/Solido/awesome-flutter">awesome-flutter</a></li><li><a href="https://github.com/flutterchina/flutter-in-action">flutter-in-action</a></li><li><a href="https://github.com/alibaba/fish-redux">阿里咸鱼框架fish-redux</a></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;极简flutter学习笔记&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="flutter" scheme="https://ficusvirens.com/categories/flutter/"/>
+    
+    
+    <category term="flutter" scheme="https://ficusvirens.com/tags/flutter/"/>
+    
+    <category term="dart" scheme="https://ficusvirens.com/tags/dart/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>编译aosp源码，刷user-debug开发机之nexus 6p</title>
+    <link href="https://ficusvirens.com/posts/c3525f2d/"/>
+    <id>https://ficusvirens.com/posts/c3525f2d/</id>
+    <published>2019-01-01T07:28:46.000Z</published>
+    <updated>2022-05-05T13:39:07.268Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近想研究下竞品app的页面，想在真机上使用hierarchyviewer工具看看，再dump数据库看看(刚升级sdk build tool到28，hierarchyviewer已经被移除了。。老实用studio上的view inspector吧)。竞品是release包，手上也没有root机器，怎么办呢，想起以前debug开发机的便利，果断刷机。手上正好有个nexus 6p，完全可以自己编译aosp源码，刷个user-debug的开发机。系统都可以debug，装在上面app就随便揉捏了。</p><span id="more"></span><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ol><li>Ubuntu 18.04.1 LTS   </li><li>笔记本(4核i5,8G内存，256G ssd)预留空余磁盘160G以上，源码加编译结果占用了148G，open-jdk8环境</li><li>手机nexus 6p (angler)  </li><li>访问google的能力  <a href="https://source.android.com/setup/build/requirements">https://source.android.com/setup/build/requirements</a></li></ol><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol><li><p>下载repo<br><a href="https://source.android.com/setup/build/downloading">https://source.android.com/setup/build/downloading</a></p></li><li><p>下载源码<br>注意手机支持的分支,直接检出  </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">repo init -u https://android.googlesource.com/platform/manifest -b android-8.1.0_r47</span><br><span class="line">repo sync -j4</span><br></pre></td></tr></table></figure><p>  查看repo当前检出分支<br>  git –git-dir .repo&#x2F;manifests&#x2F;.git&#x2F; branch -a<br>  失败了不要紧，重新sync就好，之前下载的有缓存不会重头开始的</p></li><li><p>下二进制文件（vendor的驱动）<br>注意驱动对应的build number，而build bumber和之前检出的分支对应 <strong>OPM7.181005.003android-8.1.0_r47</strong><br>对应关系查看<a href="https://source.android.com/setup/start/build-numbers">https://source.android.com/setup/start/build-numbers</a><br>华为的和高通的两个文件都要下载 解压后运行对应的sh文件，会在aosp的根目录生成vendor目录<br>下载地址：<a href="https://developers.google.com/android/drivers">https://developers.google.com/android/drivers</a></p></li><li><p>改环境,使用openjdk</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 </span><br><span class="line">export JRE_HOME=$JAVA_HOME/jre </span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib </span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH </span><br><span class="line">export LC_ALL=C</span><br></pre></td></tr></table></figure></li><li><p>编译源码</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">build/envsetup.sh </span><br><span class="line">lunch aosp_angler-userdebug </span><br><span class="line">make -j4</span><br></pre></td></tr></table></figure></li><li><p>刷机 </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export ANDROID_PRODUCT_OUT=your-aosp-path/out/target/product/angler </span><br><span class="line">fastboot flashall -w</span><br></pre></td></tr></table></figure></li></ol><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol><li><p>ninja: build stopped: subcommand failed ninja failed with: exit status 1<br>解决：可能是本地环境问题 export LC_ALL&#x3D;C<br>ref：<a href="https://stackoverflow.com/questions/51324238/aosp-build-stopped-subcommand-failedhttps://www.programering.com/a/MDM3UzNwATQ.html">https://stackoverflow.com/questions/51324238/aosp-build-stopped-subcommand-failedhttps://www.programering.com/a/MDM3UzNwATQ.html</a> </p><blockquote><p>LC_ALL&#x3D;C is to remove all localized settings, make the correct execution.</p></blockquote></li><li><p>&#x2F;bin&#x2F;bash: xmllint: command not found<br>解决：安装xmllint </p><blockquote><p>sudo apt-get install libxml2-utils</p></blockquote></li><li><p>Build with Jack …. Out of memory error GC overhead limit exceeded. Try increasing heap size with java option ‘-Xmx’.<br>解决：修改jack-server的配置文件ref：<a href="http://www.2net.co.uk/blog/jack-server.html">http://www.2net.co.uk/blog/jack-server.html</a></p><blockquote><p>vim ~&#x2F;.jack-settings<br>添加一行：<br>JACK_SERVER_VM_ARGUMENTS&#x3D;”-Dfile.encoding&#x3D;UTF-8 -XX:+TieredCompilation -Xmx4096m”<br>重启下jack-server:<br>prebuilts&#x2F;sdk&#x2F;tools&#x2F;jack-admin kill-server<br>prebuilts&#x2F;sdk&#x2F;tools&#x2F;jack-admin start-server</p></blockquote></li><li><p>flash完后不断重启<br>可能原因:</p><ul><li>binary文件只下了一个 </li><li>没有下载对应build numer的binary文件 </li><li>编译因为错误中断过，继续编译引起的<br>解决：<br>可能某些中间文件不完全或受损，把out文件夹删掉后再整编一次</li></ul></li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近想研究下竞品app的页面，想在真机上使用hierarchyviewer工具看看，再dump数据库看看(刚升级sdk build tool到28，hierarchyviewer已经被移除了。。老实用studio上的view inspector吧)。竞品是release包，手上也没有root机器，怎么办呢，想起以前debug开发机的便利，果断刷机。手上正好有个nexus 6p，完全可以自己编译aosp源码，刷个user-debug的开发机。系统都可以debug，装在上面app就随便揉捏了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="android" scheme="https://ficusvirens.com/categories/android/"/>
+    
+    
+    <category term="刷机" scheme="https://ficusvirens.com/tags/%E5%88%B7%E6%9C%BA/"/>
+    
+    <category term="aosp" scheme="https://ficusvirens.com/tags/aosp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>kotlin coroutines学习摘要</title>
+    <link href="https://ficusvirens.com/posts/ec789f13/"/>
+    <id>https://ficusvirens.com/posts/ec789f13/</id>
+    <published>2018-07-16T15:21:51.000Z</published>
+    <updated>2022-05-05T13:39:07.267Z</updated>
+    
+    <content type="html"><![CDATA[<p>kotlin coroutines学习摘要。协程的定义及优缺点。kotlin coroutine关键字和概念的初步理解。在安卓开发下的应用场景及简单应用。<br>入门级别。<br>命令行工具</p><span id="more"></span><h2 id="kotlin-coroutines"><a href="#kotlin-coroutines" class="headerlink" title="kotlin coroutines"></a>kotlin coroutines</h2><p>kotlin版的协程，比线程更轻量的异步任务操作实现。语言级别模拟实现“多线程”效果。</p><h2 id="coroutine-vs-thread"><a href="#coroutine-vs-thread" class="headerlink" title="coroutine vs thread"></a>coroutine vs thread</h2><p>线程属于系统级概念，由系统调度执行<br>协程属于语言级概念，由应用自己管理调度&#x2F;挂起&#x2F;执行协程。</p><h2 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h2><ol><li>轻量性能好<br>协程的挂起（suspend）对应线程的阻塞（block），协程上下文切换对应线程的上下文切换<br>利用挂起（suspend）当前上下文（协程上下文切换，轻量级）来代替阻塞线程（线程上下文切换，重量级）  </li><li>资源利用率高<br>可以复用被delay的线程资源。</li><li>可以使用同步的编写方式编写异步回调代码</li></ol><h2 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h2><p>某些场景下协程反复使用同一格线程，多核处理器优势没有发挥</p><h2 id="可以应用到生产环境了吗"><a href="#可以应用到生产环境了吗" class="headerlink" title="可以应用到生产环境了吗"></a>可以应用到生产环境了吗</h2><p>可以 <a href="https://stackoverflow.com/questions/46240236/can-experimental-kotlin-coroutines-be-used-in-production/46240340">refer this</a><br>The current version of kotlinx.coroutines is designed for production use. It is pretty well covered with tests, lots of things are already optimized, all the changes are made considering the issues of backwards compatibility with previously compiled code.</p><p>It certainly does serve as a test-bed for various coroutine-based things, so there are some parts that are clearly marked as “work in progress” or “unstable” in the documentation of the corresponding funs&#x2F;classes. However, by default, all the public APIs in kotlinx.coroutines are considered to be stable.</p><h2 id="应用场景："><a href="#应用场景：" class="headerlink" title="应用场景："></a>应用场景：</h2><ol><li>轻量异步任务，就没必要开线程处理了<br>客户端：单次网络请求，db&#x2F;sp操作，文件读写，图片处理</li><li>高负荷网络IO、文件IO、CPU&#x2F;GPU密集型任务，可以极大减少了线程数量，减少cpu占用<br>服务端：高并发网络请求处理</li></ol><h2 id="安卓应用场景"><a href="#安卓应用场景" class="headerlink" title="安卓应用场景"></a>安卓应用场景</h2><ol><li>rxjava异步+回调可以替换为协程异步+结果同步处理，<a href="https://medium.com/@andrea.bresolin/playing-with-kotlin-in-android-coroutines-and-how-to-get-rid-of-the-callback-hell-a96e817c108b">解决callback hell问题</a></li><li>retrofit+coroutines </li><li>room + corountines</li></ol><h2 id="coroutine关键字"><a href="#coroutine关键字" class="headerlink" title="coroutine关键字"></a>coroutine关键字</h2><p><strong>Coroutine context</strong>： 协程的运行上下文，每个协程都运行在一个CoroutineContext中。上下文是一个比较泛泛的概念，可以是一个环境，可以是一个容器，提供各种运行时资源和状态。这里Coroutine context包含两个概念：CoroutineDispatcher和job（都是CoroutineContext的子类…），<br>CoroutineDispatcher提供job执行时使用的线程，job顾名思义定义了一个具体可执行的任务。这两个加起来就构成了cotoutine上下文  </p><p>原文：<br>Coroutines always execute in some context which is represented by the value of CoroutineContext type, defined in the Kotlin standard library.</p><p>The coroutine context is a set of various elements. The main elements are the Job of the coroutine, which we’ve seen before, and its dispatcher, which is covered in this section.</p><p><strong>launch</strong>：开一个协程，返回一个job引用 Launches new coroutine without blocking current thread and returns a reference to the coroutine as a Job. The coroutine is cancelled when the resulting job is cancelled.</p><p><strong>async</strong>：开一个协程，返回一个deffered引用（带future结果的特殊job）async is just like launch. It starts a separate coroutine which is a light-weight thread that works concurrently with all the other coroutines. The difference is that launch returns a Job and does not carry any resulting value, while async returns a Deferred.</p><p><strong>UI</strong>：安卓的主线程上下文  </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">val UI = HandlerContext(Handler(Looper.getMainLooper()), &quot;UI&quot;)</span><br></pre></td></tr></table></figure><p><strong>Deferred</strong>：轻量级、非阻塞的 future，可以通过await()来获得结果 a light-weight non-blocking future that represents a promise to provide a result later. You can use .await() on a deferred value to get its eventual result, but Deferred is also a Job, so you can cancel it if needed.</p><p>**await()**：启动一个新的协程，挂起当前coroutine直到新协程执行完并返回值</p><p><strong>suspend function</strong>: 只能运行在coroutine中，在新的coroutine中执行时挂起当前coroutine</p><ul><li><a href="https://medium.com/@elye.project/understanding-suspend-function-of-coroutines-de26b070c5ed">suspend vs blocking</a></li></ul><h2 id="简单异步回调用协程同步实现"><a href="#简单异步回调用协程同步实现" class="headerlink" title="简单异步回调用协程同步实现"></a>简单异步回调用协程同步实现</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//创建新的UI协程</span><br><span class="line">launch(UI) &#123;</span><br><span class="line">//1 创建新的thread协程</span><br><span class="line">val deferred = async&#123;</span><br><span class="line">//2-2 thread协程 do something </span><br><span class="line">&#125; </span><br><span class="line">//2-1 挂起当前协程，执行async开启的新协程</span><br><span class="line">val result = deferred.await() </span><br><span class="line">//3 回到ui协程 do something with the result</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><p><a href="https://www.cnblogs.com/xrq730/p/5186609.html">线程上下文切换</a><br>即使是单核CPU也支持多线程执行代码，CPU通过给每个线程分配CPU时间片来实现这个机制。时间片是CPU分配给各个线程的时间，因为时间片非常短，所以CPU通过不停地切换线程执行，让我们感觉多个线程时同时执行的，时间片一般是几十毫秒（ms）。<br>CPU通过时间片分配算法来循环执行任务，当前任务执行一个时间片后会切换到下一个任务。但是，在切换前会保存上一个任务的状态，以便下次切换回这个任务时，可以再次加载这个任务的状态，从任务保存到再加载的过程就是一次上下文切换。</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;kotlin coroutines学习摘要。协程的定义及优缺点。kotlin coroutine关键字和概念的初步理解。在安卓开发下的应用场景及简单应用。&lt;br&gt;入门级别。&lt;br&gt;命令行工具&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="kotlin" scheme="https://ficusvirens.com/categories/kotlin/"/>
+    
+    
+    <category term="kotlin" scheme="https://ficusvirens.com/tags/kotlin/"/>
+    
+    <category term="language" scheme="https://ficusvirens.com/tags/language/"/>
+    
+    <category term="kotlin coroutine" scheme="https://ficusvirens.com/tags/kotlin-coroutine/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Git实用命令</title>
+    <link href="https://ficusvirens.com/posts/cefffd1f/"/>
+    <id>https://ficusvirens.com/posts/cefffd1f/</id>
+    <published>2017-07-05T15:46:32.000Z</published>
+    <updated>2022-05-05T13:39:07.264Z</updated>
+    
+    <content type="html"><![CDATA[<p>git实用命令，快捷键收录。</p><span id="more"></span><h2 id="config"><a href="#config" class="headerlink" title="config"></a>config</h2><ul><li>配置用户名和邮箱<br> <code>git config --global user.name &quot;username&quot;</code><br> <code>git config --global user.email &quot;mailbolx@163.com&quot;</code></li><li>git配置代理(看ss配置)<br><code>git config --global http.proxy &#39;socks5://127.0.0.1:1080&#39; git config --global https.proxy &#39;socks5://127.0.0.1:1080&#39;</code></li><li>取消代理<br><code>git config --global --unset http.proxy</code></li><li>git打开颜色开关<br> <code>git config --global color.ui true</code></li></ul><h2 id="branch"><a href="#branch" class="headerlink" title="branch"></a>branch</h2><ul><li>设置本地dev分支track远程分支origin&#x2F;master<br><code>git branch -u origin/master dev</code></li><li>切到上一个工作分子<br><code>git checkout -</code></li><li>查看本地分支track的远程分支<br><code>git branch -vv</code></li><li>checkout远程分支<br><code>git checkout -t origin/dev  //-t参数, 创建和远程分支一样名字的本地分支</code></li><li>删除远程分支<br><code>git push [远程名] :[分支名]</code><br><code>git push origin :serverfix</code></li></ul><h2 id="commit"><a href="#commit" class="headerlink" title="commit"></a>commit</h2><ul><li>获取两个branch&#x2F;commit (分支 &#x2F; 提交) 共同的祖先<br><code>git merge-base commit1 commit2</code></li><li>暂存提交&#x2F;签出暂存<br><code>git stash/git stash pop</code></li><li>合并多次提交，生成patch<br><code>git diff HEAD~2..HEAD &gt; my-patch.diff  git format-patch HEAD~2..HEAD --stdout &gt; changes.patch git format-patch -x --stdout &gt; patch-ddmmyyy.patch git diff tag1 tag2 &gt; the-patch.diff</code></li><li>查看改变的文件列表<br><code>git diff tag1 tag2 --stat</code></li><li>仅查看指定文件&#x2F;文件夹改变<br><code>git log -- &quot;some file/dir&quot;</code><br><code>git diff tag1 tag2 -- some/file/name</code></li></ul><h2 id="tag"><a href="#tag" class="headerlink" title="tag"></a>tag</h2><ul><li>在当前位置添加tag<br><code>git tag -a v1.4 -m &quot;v1.4&quot;</code></li><li>为commit添加tag<br><code>git tag -a v1.2 9fceb02</code></li><li>推送tag到远程分支<br><code>git push origin --tags</code><br><code>git push origin 标签名</code></li><li>删除本地标签：<br><code>git tag -d 标签名</code></li><li>删除远程标签：<br><code>git push origin :refs/tags/标签名</code></li></ul><h2 id="submodule"><a href="#submodule" class="headerlink" title="submodule"></a>submodule</h2><ul><li>添加submodule<br><code>git submodule add https://github.com/hexojs/hexo-theme-light.git themes/light git commit -am &quot;add submodule&quot; git submodule init git submodule update</code></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;git实用命令，快捷键收录。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Android常用工具</title>
+    <link href="https://ficusvirens.com/posts/4cbd63ec/"/>
+    <id>https://ficusvirens.com/posts/4cbd63ec/</id>
+    <published>2017-07-04T15:58:46.000Z</published>
+    <updated>2022-05-05T13:39:07.264Z</updated>
+    
+    <content type="html"><![CDATA[<p>Android开发实用快捷键收录，adb,aapt,android,fastboot<br>命令行工具</p><span id="more"></span><h2 id="adb"><a href="#adb" class="headerlink" title="adb"></a>adb</h2><ul><li>查看屏幕尺寸&#x2F;density<br><code>adb shell wm size/density</code></li><li>查看应用启动时间<br><code>adb shell am start -W -n &quot;packagename/absoluteMainActivityname&quot;</code></li><li>查看当前focused Activity<br> <code>adb shell dumpsys activity activities|grep -i focus</code></li><li>设置log tag level<br><code>adb shell setprop log.tag.Email VERBOSE</code></li><li>dump应用内存占用<br><code>adb shell dumpsys meminfo packagename</code></li><li>查看包信息<br> <code>adb shell dumpsys package packagename</code></li><li>输入文字<br> <code>adb shell input text &quot;dddd&quot;</code></li><li>查看包安装路径<br><code>adb shell pm list packages -f |grep Email</code></li><li>跑monkey<br> <code>adb shell monkey  -p com.android.email --throttle 150 -v -s 3500 300000</code></li><li>查看手机ip<br><code>adb shell netcfg</code></li><li>重新挂载system为rw(root手机刷debug版本系统可行，或者启动一个可以读写的模拟器)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">adb disable-verity</span><br><span class="line">adb reboot</span><br><span class="line">adb root</span><br><span class="line">adb shell mount  //查看挂载点</span><br><span class="line">adb shell mount -o remount,rw  -t ext4  /dev/block/dm-0 /system</span><br></pre></td></tr></table></figure></li></ul><h2 id="aapt"><a href="#aapt" class="headerlink" title="aapt"></a>aapt</h2><ul><li>查看apk版本信息<br><code>aapt dump badging app-release.apk</code></li><li>查看apk权限信息<br><code>aapt dump permissions app-release.apk</code></li><li>导出apk string内容<br><code>aapt d --values resources ~/temp/EmailRes.apk &gt;~/temp/email_string.txt</code></li></ul><h2 id="emulator"><a href="#emulator" class="headerlink" title="emulator"></a>emulator</h2><ul><li>列举所有可用模拟器<br><code>emulator -list-avds</code></li><li>启动带shell输出模拟器<br><code>emulator -avd xxx -shell</code></li><li>启动一个可以将&#x2F;system挂载为rw的模拟器<br><code>emulator -avd 3.7_WVGA_Nexus_One_API_23 -writable-system</code></li></ul><h2 id="android"><a href="#android" class="headerlink" title="android"></a>android</h2><ul><li>命令行产看可以安装更新的sdk<br><code>android list sdk</code></li><li>服务器中命令行使用代理更新指定SDK(jenkin服务器中可能没有界面)<br><code>android update sdk --no-ui --filter 2 --proxy-host mirrors.neusoft.edu.cn  --proxy-port 80 -s</code></li></ul><h2 id="fastboot"><a href="#fastboot" class="headerlink" title="fastboot"></a>fastboot</h2><ul><li>fastboot刷机<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">adb reboot bootloader</span><br><span class="line">fastboot flash boot boot.img</span><br><span class="line">fastboot flash system system.img</span><br><span class="line">fastboot flash userdata userdata.img</span><br><span class="line">fastboot flash custpack custpack.img</span><br><span class="line">fastboot reboot</span><br></pre></td></tr></table></figure></li></ul><h2 id="others"><a href="#others" class="headerlink" title="others"></a>others</h2><ul><li>命令行查看apk签名<br><code>keytool -list -printcert -jarfile app.apk</code></li><li>tcpdump抓包<br><code>/data/local/tcpdump -p -vv -s 0 -w /sdcard/capture.pcap</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-w 表示抓取的包保存的文件路径</span><br><span class="line">-v，展示更多的有用信息，还可以用-vv -vvv增加信息的展示量。</span><br><span class="line">-p 将网络接口设置成非混杂模式</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Android开发实用快捷键收录，adb,aapt,android,fastboot&lt;br&gt;命令行工具&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="tools" scheme="https://ficusvirens.com/categories/tools/"/>
+    
+    
+    <category term="Android" scheme="https://ficusvirens.com/tags/Android/"/>
+    
+    <category term="tools" scheme="https://ficusvirens.com/tags/tools/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vim常用快捷键</title>
+    <link href="https://ficusvirens.com/posts/58ea93b5/"/>
+    <id>https://ficusvirens.com/posts/58ea93b5/</id>
+    <published>2017-07-03T13:48:09.000Z</published>
+    <updated>2022-05-05T13:39:07.267Z</updated>
+    
+    <content type="html"><![CDATA[<p>Vim常用快捷键,脱离鼠标操作。导航，编辑，搜索。</p><span id="more"></span><h3 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h3><ul><li>h  左</li><li>j  下</li><li>k  上</li><li>l  右</li><li>w 下一个词。 (word)</li><li>b  上一个词。 (backword)</li><li>ctrl + n :  下一个候选</li><li>ctrl + p :  上一个候选</li><li>shift + 4: 跳到当前行的末尾( shift + 4为 $ , 这是正则表达式中 末尾的意思）</li><li>0:  跳到当前行的行首： 0</li><li>gg: 第一行</li><li>shift + g: 末行。</li><li>ctrl + f: 向下一屏（f &#x3D; forward)</li><li>ctrl + b: 向上一屏（b &#x3D; backward)</li><li>g; :跳到 上一次编辑的地方</li><li>g, :跳到 下一次编辑的地方</li><li>ctrl + o: 快速返回上一次编辑的文件 ( o 意为 outer )</li><li>ctrl + i: 快速返回下一次编辑的文件 ( i 意为 inner )</li></ul><h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><ul><li>&#x2F;\cxxx 忽略大小写搜索 </li><li>&#x2F;\Cxxx 精确搜索</li><li>n 继续搜索下一个</li><li>shift+n 搜索前一个</li><li>%s&#x2F;原来的字符串&#x2F;新字符串&#x2F;  全局替换</li></ul><h3 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h3><p>shift + v， 然后上下左右移动。</p><h3 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h3><ul><li>i: 在光标前输入(insert)</li><li>a: 在光标后输入 (append &#x2F; after)</li><li>shift+i: 在行首增加内容</li><li>shift+a: 在行末增加内容</li><li>o: 在光标下行增加内容</li><li>shift+o: 在光标上行增加内容</li><li>x: 删掉一个字母</li><li>dw db: 删掉一个单词</li><li>dd: 删掉一行： dd</li><li>删掉多行： shift +v, 然后 x 或者 d</li><li>yw: 复制一个单词</li><li>yy: 复制当前行</li><li>p: 粘贴</li><li>u: 撤销</li><li>ctrl+z: 暂存</li><li>fg: 恢复暂存 </li><li>q:  退出</li><li>wq:  保存退出</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Vim常用快捷键,脱离鼠标操作。导航，编辑，搜索。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="tools" scheme="https://ficusvirens.com/categories/tools/"/>
+    
+    
+    <category term="tools" scheme="https://ficusvirens.com/tags/tools/"/>
+    
+    <category term="vim" scheme="https://ficusvirens.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用github page搭建hexo博客最佳实践</title>
+    <link href="https://ficusvirens.com/posts/85408c5b/"/>
+    <id>https://ficusvirens.com/posts/85408c5b/</id>
+    <published>2017-07-02T08:16:26.000Z</published>
+    <updated>2022-05-05T13:39:07.267Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用github page搭建hexo博客最佳实践。源文章和生成的h5分开管理，推送到各自的仓库。</p><span id="more"></span><p><strong>环境：</strong>MacOs Git NodeJs<br><strong>1. 创建github page repo <a href="https://pages.github.com/">github page</a></strong></p><blockquote><p>注意repo name必须为你的用户名＋.github.io(<em>eg: gnehz972.github.io</em>)<br><img src="/posts/85408c5b/githubio_repo.webp" alt="image.png"></p></blockquote><p><strong>2. 安装hexo</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo npm install -g hexo-cli  </span><br></pre></td></tr></table></figure><p><strong>3. 创建以repo命名的hexo工程</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init gnehz972.github.io</span><br></pre></td></tr></table></figure><p><strong>4. 本地验证</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo server    </span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</span><br></pre></td></tr></table></figure><p><strong>5. 创建新文章</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;first hexo blog&quot;</span><br><span class="line">INFO  Created: ~/dev/hexo/gnehz972.github.io/source/_posts/first-hexo-blog.md</span><br></pre></td></tr></table></figure><p><strong>6. 修改配置文件_config.yml，配置部署信息</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/gnehz972/gnehz972.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure><p><strong>7. 部署到github page</strong></p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure><p><strong>8. 验证部署，访问 <a href="https://gnehz972.github.io/">https://gnehz972.github.io/</a></strong><br><strong>9. md源文件管理</strong><br>hexo部署到站点的全是渲染过后的html文件，原始md文件没有上传。没有原始md文件，万一丢失或者想要在公司其他电脑上写文章，将很不方便。这里我又新建了一个<a href="https://github.com/gnehz972/hexoblog">github repo</a>，将md文件纳入管理。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd gnehz972.github.io</span><br><span class="line">vim .gitignore</span><br></pre></td></tr></table></figure><p>修改.gitignore文件</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.DS_Store</span><br><span class="line">Thumbs.db</span><br><span class="line">db.json</span><br><span class="line">*.log</span><br><span class="line">node_modules/</span><br><span class="line">public/</span><br><span class="line">.deploy*/</span><br></pre></td></tr></table></figure><p>添加到git管理</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git init </span><br><span class="line">git remote add origin https://github.com/gnehz972/hexoblog.git</span><br><span class="line">git push -u origin master </span><br><span class="line">git add .</span><br><span class="line">git commit  -am &quot;add source&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure><p>之后写hexo blog步骤就是</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;blog&quot;</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br><span class="line">//back up original md file</span><br><span class="line">git commit -am &quot;back up source file&quot;</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure><p><strong>10. 主题管理</strong><br>添加light主题</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git submodule add https://github.com/hexojs/hexo-theme-light.git themes/light</span><br><span class="line">git commit -am &quot;add light&quot;</span><br><span class="line">git submodule init</span><br><span class="line">git submodule update</span><br></pre></td></tr></table></figure><p>修改_config.yml配置文件theme</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme: light</span><br></pre></td></tr></table></figure><p><strong>11. FAQ</strong></p><blockquote><p>安装hexo出现 “Cannot find module ‘.&#x2F;build&#x2F;Release&#x2F;DTraceProviderBindings’”<br><a href="https://github.com/hexojs/hexo/issues/1922">reference</a><br>解决方案（类似重装，莫名奇妙就好了－－＃）：<br>$ npm install hexo –no-optional<br>if it doesn’t work<br>try<br>$ npm uninstall hexo-cli -g<br>$ npm install hexo-cli -g</p></blockquote>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;使用github page搭建hexo博客最佳实践。源文章和生成的h5分开管理，推送到各自的仓库。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="tools" scheme="https://ficusvirens.com/categories/tools/"/>
+    
+    
+    <category term="tools" scheme="https://ficusvirens.com/tags/tools/"/>
+    
+    <category term="hexo" scheme="https://ficusvirens.com/tags/hexo/"/>
+    
+    <category term="h5" scheme="https://ficusvirens.com/tags/h5/"/>
+    
+    <category term="blog" scheme="https://ficusvirens.com/tags/blog/"/>
+    
+  </entry>
+  
+</feed>

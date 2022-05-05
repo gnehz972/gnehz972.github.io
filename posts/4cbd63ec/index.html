@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
+  <link rel="mask-icon" href="/favicon.ico" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css">
+
+<script class="next-config" data-name="main" type="application/json">{&quot;hostname&quot;:&quot;ficusvirens.com&quot;,&quot;root&quot;:&quot;&#x2F;&quot;,&quot;images&quot;:&quot;&#x2F;images&quot;,&quot;scheme&quot;:&quot;Gemini&quot;,&quot;version&quot;:&quot;8.4.0&quot;,&quot;exturl&quot;:false,&quot;sidebar&quot;:{&quot;position&quot;:&quot;left&quot;,&quot;display&quot;:&quot;post&quot;,&quot;padding&quot;:18,&quot;offset&quot;:12},&quot;copycode&quot;:false,&quot;bookmark&quot;:{&quot;enable&quot;:false,&quot;color&quot;:&quot;#222&quot;,&quot;save&quot;:&quot;auto&quot;},&quot;fancybox&quot;:false,&quot;mediumzoom&quot;:false,&quot;lazyload&quot;:false,&quot;pangu&quot;:false,&quot;comments&quot;:{&quot;style&quot;:&quot;tabs&quot;,&quot;active&quot;:null,&quot;storage&quot;:true,&quot;lazyload&quot;:false,&quot;nav&quot;:null},&quot;motion&quot;:{&quot;enable&quot;:false,&quot;async&quot;:false,&quot;transition&quot;:{&quot;post_block&quot;:&quot;fadeIn&quot;,&quot;post_header&quot;:&quot;fadeInDown&quot;,&quot;post_body&quot;:&quot;fadeInDown&quot;,&quot;coll_header&quot;:&quot;fadeInLeft&quot;,&quot;sidebar&quot;:&quot;fadeInUp&quot;}},&quot;prism&quot;:false,&quot;i18n&quot;:{&quot;placeholder&quot;:&quot;搜索...&quot;,&quot;empty&quot;:&quot;没有找到任何搜索结果：${query}&quot;,&quot;hits_time&quot;:&quot;找到 ${hits} 个搜索结果（用时 ${time} 毫秒）&quot;,&quot;hits&quot;:&quot;找到 ${hits} 个搜索结果&quot;}}</script>
+<meta name="description" content="Android开发实用快捷键收录，adb,aapt,android,fastboot命令行工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android常用工具">
+<meta property="og:url" content="https://ficusvirens.com/posts/4cbd63ec/index.html">
+<meta property="og:site_name" content="gnehz972">
+<meta property="og:description" content="Android开发实用快捷键收录，adb,aapt,android,fastboot命令行工具">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-07-04T15:58:46.000Z">
+<meta property="article:modified_time" content="2022-05-05T13:39:07.264Z">
+<meta property="article:author" content="gnehz972">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="tools">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://ficusvirens.com/posts/4cbd63ec/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{&quot;sidebar&quot;:&quot;&quot;,&quot;isHome&quot;:false,&quot;isPost&quot;:true,&quot;lang&quot;:&quot;zh-CN&quot;,&quot;comments&quot;:true,&quot;permalink&quot;:&quot;https:&#x2F;&#x2F;ficusvirens.com&#x2F;posts&#x2F;4cbd63ec&#x2F;&quot;,&quot;path&quot;:&quot;posts&#x2F;4cbd63ec&#x2F;&quot;,&quot;title&quot;:&quot;Android常用工具&quot;}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">&quot;&quot;</script>
+<title>Android常用工具 | gnehz972</title><script src="/js/config.js"></script>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="gnehz972" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">gnehz972</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#adb"><span class="nav-number">1.</span> <span class="nav-text">adb</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#aapt"><span class="nav-number">2.</span> <span class="nav-text">aapt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#emulator"><span class="nav-number">3.</span> <span class="nav-text">emulator</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#android"><span class="nav-number">4.</span> <span class="nav-text">android</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#fastboot"><span class="nav-number">5.</span> <span class="nav-text">fastboot</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#others"><span class="nav-number">6.</span> <span class="nav-text">others</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">gnehz972</p>
+  <div class="site-description" itemprop="description">Android, Python, H5 technology study and share</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+        <span class="site-state-item-count">5</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">14</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://ficusvirens.com/posts/4cbd63ec/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="gnehz972">
+      <meta itemprop="description" content="Android, Python, H5 technology study and share">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="gnehz972">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Android常用工具
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-07-04 23:58:46" itemprop="dateCreated datePublished" datetime="2017-07-04T23:58:46+08:00">2017-07-04</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-05-05 21:39:07" itemprop="dateModified" datetime="2022-05-05T21:39:07+08:00">2022-05-05</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/tools/" itemprop="url" rel="index"><span itemprop="name">tools</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Android开发实用快捷键收录，adb,aapt,android,fastboot<br>命令行工具</p>
+<span id="more"></span>
+<h2 id="adb"><a href="#adb" class="headerlink" title="adb"></a>adb</h2><ul>
+<li>查看屏幕尺寸&#x2F;density<br><code>adb shell wm size/density</code></li>
+<li>查看应用启动时间<br><code>adb shell am start -W -n &quot;packagename/absoluteMainActivityname&quot;</code></li>
+<li>查看当前focused Activity<br> <code>adb shell dumpsys activity activities|grep -i focus</code></li>
+<li>设置log tag level<br><code>adb shell setprop log.tag.Email VERBOSE</code></li>
+<li>dump应用内存占用<br><code>adb shell dumpsys meminfo packagename</code></li>
+<li>查看包信息<br> <code>adb shell dumpsys package packagename</code></li>
+<li>输入文字<br> <code>adb shell input text &quot;dddd&quot;</code></li>
+<li>查看包安装路径<br><code>adb shell pm list packages -f |grep Email</code></li>
+<li>跑monkey<br> <code>adb shell monkey  -p com.android.email --throttle 150 -v -s 3500 300000</code></li>
+<li>查看手机ip<br><code>adb shell netcfg</code></li>
+<li>重新挂载system为rw(root手机刷debug版本系统可行，或者启动一个可以读写的模拟器)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">adb disable-verity</span><br><span class="line">adb reboot</span><br><span class="line">adb root</span><br><span class="line">adb shell mount  //查看挂载点</span><br><span class="line">adb shell mount -o remount,rw  -t ext4  /dev/block/dm-0 /system</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="aapt"><a href="#aapt" class="headerlink" title="aapt"></a>aapt</h2><ul>
+<li>查看apk版本信息<br><code>aapt dump badging app-release.apk</code></li>
+<li>查看apk权限信息<br><code>aapt dump permissions app-release.apk</code></li>
+<li>导出apk string内容<br><code>aapt d --values resources ~/temp/EmailRes.apk &gt;~/temp/email_string.txt</code></li>
+</ul>
+<h2 id="emulator"><a href="#emulator" class="headerlink" title="emulator"></a>emulator</h2><ul>
+<li>列举所有可用模拟器<br><code>emulator -list-avds</code></li>
+<li>启动带shell输出模拟器<br><code>emulator -avd xxx -shell</code></li>
+<li>启动一个可以将&#x2F;system挂载为rw的模拟器<br><code>emulator -avd 3.7_WVGA_Nexus_One_API_23 -writable-system</code></li>
+</ul>
+<h2 id="android"><a href="#android" class="headerlink" title="android"></a>android</h2><ul>
+<li>命令行产看可以安装更新的sdk<br><code>android list sdk</code></li>
+<li>服务器中命令行使用代理更新指定SDK(jenkin服务器中可能没有界面)<br><code>android update sdk --no-ui --filter 2 --proxy-host mirrors.neusoft.edu.cn  --proxy-port 80 -s</code></li>
+</ul>
+<h2 id="fastboot"><a href="#fastboot" class="headerlink" title="fastboot"></a>fastboot</h2><ul>
+<li>fastboot刷机<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">adb reboot bootloader</span><br><span class="line">fastboot flash boot boot.img</span><br><span class="line">fastboot flash system system.img</span><br><span class="line">fastboot flash userdata userdata.img</span><br><span class="line">fastboot flash custpack custpack.img</span><br><span class="line">fastboot reboot</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="others"><a href="#others" class="headerlink" title="others"></a>others</h2><ul>
+<li>命令行查看apk签名<br><code>keytool -list -printcert -jarfile app.apk</code></li>
+<li>tcpdump抓包<br><code>/data/local/tcpdump -p -vv -s 0 -w /sdcard/capture.pcap</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-w 表示抓取的包保存的文件路径</span><br><span class="line">-v，展示更多的有用信息，还可以用-vv -vvv增加信息的展示量。</span><br><span class="line">-p 将网络接口设置成非混杂模式</span><br></pre></td></tr></table></figure></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Android/" rel="tag"># Android</a>
+              <a href="/tags/tools/" rel="tag"># tools</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/58ea93b5/" rel="prev" title="Vim常用快捷键">
+                  <i class="fa fa-chevron-left"></i> Vim常用快捷键
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/cefffd1f/" rel="next" title="Git实用命令">
+                  Git实用命令 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+<script src="/js/comments.js"></script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">gnehz972</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+</body>
+</html>
