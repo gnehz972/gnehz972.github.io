@@ -6,7 +6,7 @@
   <link href="https://ficusvirens.com/atom.xml" rel="self"/>
   
   <link href="https://ficusvirens.com/"/>
-  <updated>2022-05-05T13:39:07.265Z</updated>
+  <updated>2022-09-18T04:11:53.215Z</updated>
   <id>https://ficusvirens.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>给媳妇儿做项目之OA排班表</title>
+    <link href="https://ficusvirens.com/posts/dd496f02/"/>
+    <id>https://ficusvirens.com/posts/dd496f02/</id>
+    <published>2022-05-07T14:14:42.000Z</published>
+    <updated>2022-09-18T04:11:53.215Z</updated>
+    
+    <content type="html"><![CDATA[<p>最近帮媳妇儿做了个排班表管理应用，可以在日历上直接安排排班信息，同时可以生成汇总的excel表。简单记录下过程，为了凸显项目的高大上，给项目命名叫OA排班表（dodge</p><span id="more"></span><h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><ol><li><input checked="" disabled="" type="checkbox"> 能按天按人头排班，好修改(Calendar页面修改)</li><li><input checked="" disabled="" type="checkbox"> 排班汇总信息能导出excel（存数据库crud，Excel操作）</li><li><input checked="" disabled="" type="checkbox"> 可视化每人的排班情况（Calenader+Chart）</li></ol><h2 id="技术分析"><a href="#技术分析" class="headerlink" title="技术分析"></a>技术分析</h2><ul><li><p>客户端 vs web<br>轻量级应用，web永远是使用最方便的</p></li><li><p>React vs NextJs<br>需要后端持有数据库密钥，选NextJs，前后一把梭</p></li><li><p>Mongo<br>轻量级数据完全可以满足，有free tier</p></li></ul><h2 id="框架"><a href="#框架" class="headerlink" title="框架"></a>框架</h2><ul><li>TypeScript</li><li>NextJs</li><li>MongoDb</li><li>Material UI</li><li>React Big Calendar</li><li>ExcelJs</li><li>Recharts</li><li>Vercel</li></ul><h2 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h2><p>用Material UI搭积木</p><h2 id="Coding"><a href="#Coding" class="headerlink" title="Coding"></a>Coding</h2><ul><li>配置脚手架<ul><li>NextJs template</li><li>Linting &amp; Prettier setup</li><li>Folder structure modify</li></ul></li><li>构建主页面结构，页面侧边栏+对应页面</li><li>添加calendar页面<ul><li>Calendar页面</li><li>添加排班日程<ul><li>日程数据类型设计(start,end,name,type)</li><li>日程增删改</li></ul></li><li>添加Mongodb<ul><li>申请实例并配置密钥</li><li>绑定日程增删改</li></ul></li></ul></li><li>添加数据统计Chart页面<ul><li>Chart图表选择</li><li>数据查询并汇总呈现</li></ul></li><li>添加导出Excel页面<ul><li>数据查询并后端生成excel</li><li>添加下载交互</li></ul></li></ul><p>代码参看 <a href="https://github.com/gnehz972/workday-next">github</a></p><h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><ul><li>注册Vercel账号并创建部署实例，绑定github repo</li><li>配置预置的组员信息到环境变量</li><li>配置Mongodb相关密钥到环境变量</li><li>commit自动触发部署到 <a href="https://workday-next.vercel.app/">work-day</a></li></ul><h2 id="交付"><a href="#交付" class="headerlink" title="交付"></a>交付</h2><p>媳妇儿看了下，媳妇儿表示很喜欢，表示还是excel更香(doge</p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;最近帮媳妇儿做了个排班表管理应用，可以在日历上直接安排排班信息，同时可以生成汇总的excel表。简单记录下过程，为了凸显项目的高大上，给项目命名叫OA排班表（dodge&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="默认" scheme="https://ficusvirens.com/categories/%E9%BB%98%E8%AE%A4/"/>
+    
+    
+    <category term="默认" scheme="https://ficusvirens.com/tags/%E9%BB%98%E8%AE%A4/"/>
+    
+  </entry>
   
   <entry>
     <title>Jetpack Compose概览</title>

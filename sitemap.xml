@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ficusvirens.com/posts/dd496f02/</loc>
+    
+    <lastmod>2022-09-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ficusvirens.com/posts/85408c5b/</loc>
     
     <lastmod>2022-05-07</lastmod>
@@ -88,7 +95,7 @@
 
   <url>
     <loc>https://ficusvirens.com/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -96,98 +103,105 @@
   
   <url>
     <loc>https://ficusvirens.com/tags/Android/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/tools/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/Jetpack-Compose/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/vim/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/kotlin/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/language/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/kotlin-coroutine/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/hexo/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/h5/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/blog/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/flutter/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/dart/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/%E5%88%B7%E6%9C%BA/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/aosp/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/tags/%E9%BB%98%E8%AE%A4/</loc>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -196,35 +210,42 @@
   
   <url>
     <loc>https://ficusvirens.com/categories/tools/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/categories/Android/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/categories/kotlin/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/categories/flutter/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/categories/android/</loc>
-    <lastmod>2022-05-07</lastmod>
+    <lastmod>2022-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/categories/%E9%BB%98%E8%AE%A4/</loc>
+    <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
