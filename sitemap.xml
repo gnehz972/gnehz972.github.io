@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ficusvirens.com/posts/f7dab9e4/</loc>
+    
+    <lastmod>2022-09-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ficusvirens.com/posts/dd496f02/</loc>
     
     <lastmod>2022-09-18</lastmod>
@@ -201,6 +208,27 @@
   
   <url>
     <loc>https://ficusvirens.com/tags/%E9%BB%98%E8%AE%A4/</loc>
+    <lastmod>2022-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/tags/Refactor/</loc>
+    <lastmod>2022-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/tags/Kotlin/</loc>
+    <lastmod>2022-09-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/tags/MAD/</loc>
     <lastmod>2022-09-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

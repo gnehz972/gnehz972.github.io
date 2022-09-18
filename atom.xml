@@ -6,7 +6,7 @@
   <link href="https://ficusvirens.com/atom.xml" rel="self"/>
   
   <link href="https://ficusvirens.com/"/>
-  <updated>2022-09-18T04:20:59.061Z</updated>
+  <updated>2022-09-18T13:12:10.936Z</updated>
   <id>https://ficusvirens.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>一个安卓老项目重构计划</title>
+    <link href="https://ficusvirens.com/posts/f7dab9e4/"/>
+    <id>https://ficusvirens.com/posts/f7dab9e4/</id>
+    <published>2022-09-18T09:28:20.000Z</published>
+    <updated>2022-09-18T13:12:10.936Z</updated>
+    
+    <content type="html"><![CDATA[<p>老项目维护，最老代码可以追述到十年前！生词本背单词维护至今，除了新功能开发，UI迭代，架构没有特别大的变更。后续引入Rxjava+retrofit，安卓系统高版本适配等几次动静都不大。现在安卓开发MAD已经成熟，Jetpack Compose趋于稳定，是时候来一波大的改造了。</p><span id="more"></span><h2 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h2><ul><li>大部分是Java代码</li><li>RxJava and Hndler处理异步任务</li><li>使用AppCompat theme</li><li>使用sqlite helper及raw sql封装数据库调用</li><li>大量分散的shared preference用户设置, 没有归类和类型检查</li><li>Intent传值比较多，没有类型检查</li></ul><h2 id="改造计划"><a href="#改造计划" class="headerlink" title="改造计划"></a>改造计划</h2><ul><li><input checked="" disabled="" type="checkbox"> AppCompat theme -&gt; MD3<ul><li><input checked="" disabled="" type="checkbox"> 切换到md3</li><li><input checked="" disabled="" type="checkbox"> 主页面tab切换到BottomNavigationView+ViewPager2</li></ul></li><li><input disabled="" type="checkbox"> xml ui -&gt; Jetpack Compose <ul><li><input disabled="" type="checkbox"> 部分页面切换到compose</li></ul></li><li><input disabled="" type="checkbox"> Navigation component<ul><li><input disabled="" type="checkbox"> Navigation link</li><li><input disabled="" type="checkbox"> 使用Safe argument做传值数据类型检查</li></ul></li><li><input checked="" disabled="" type="checkbox"> Java -&gt; Kotlin</li><li><input checked="" disabled="" type="checkbox"> 引入Kotlin coroutine</li><li><input checked="" disabled="" type="checkbox"> 引入Hilt注入框架</li><li><input checked="" disabled="" type="checkbox"> 采用mvvm, viewmodel + Coroutine flow + Livedata</li><li><input disabled="" type="checkbox"> raw sql -&gt; Room<ul><li><input checked="" disabled="" type="checkbox"> new table schema</li><li><input disabled="" type="checkbox"> db migration<ul><li><input disabled="" type="checkbox"> 多个相同schema的table合成一个table</li></ul></li></ul></li><li><input disabled="" type="checkbox"> Shared preference -&gt; DataStore<ul><li><input disabled="" type="checkbox"> Proto DataStore + Coroutine + LiveData封装成可以监听的有类型检查的LiveData</li><li><input disabled="" type="checkbox"> 用户legacy preference setting migration</li></ul></li></ul><h2 id="踩坑-x2F-收获"><a href="#踩坑-x2F-收获" class="headerlink" title="踩坑&#x2F;收获"></a>踩坑&#x2F;收获</h2><ul><li>Room不支持动态table name，相同scehma的table只能有一个。之前一个生词本一张table存储，现在需要合并到同一个table。</li><li>想一步到位迁移到StateFlow，发现使用上有点复杂。Flow没有Android和Lifecircle概念的，需要使用特殊的collect去处理多次触发stream，不能自动unsubscribe等问题。考虑到Sunflower这个Google自己的示范archetechure的库还在使用Livedata，考虑暂时使用Flow+Livedata结合的方式。在repo以及更底层使用Flow，Viewmodel中使用asLivedata()将flow转换为Livedata，UI层去observe Livedata以更新UI。</li><li>自己坑最致命，看十年前代码很是酸爽！</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;老项目维护，最老代码可以追述到十年前！生词本背单词维护至今，除了新功能开发，UI迭代，架构没有特别大的变更。后续引入Rxjava+retrofit，安卓系统高版本适配等几次动静都不大。现在安卓开发MAD已经成熟，Jetpack Compose趋于稳定，是时候来一波大的改造了。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Android" scheme="https://ficusvirens.com/categories/Android/"/>
+    
+    
+    <category term="Android" scheme="https://ficusvirens.com/tags/Android/"/>
+    
+    <category term="Refactor" scheme="https://ficusvirens.com/tags/Refactor/"/>
+    
+    <category term="Kotlin" scheme="https://ficusvirens.com/tags/Kotlin/"/>
+    
+    <category term="MAD" scheme="https://ficusvirens.com/tags/MAD/"/>
+    
+  </entry>
   
   <entry>
     <title>给媳妇儿做项目之OA排班表</title>

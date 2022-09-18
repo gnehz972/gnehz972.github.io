@@ -19,31 +19,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"ficusvirens.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="Jetpack Compose是Google在2019年推出的一个现代化UI框架，最近终于进入beta阶段，Google I&#x2F;O 2021透露将在7月发布稳定版。对标iOS Swift UI，可以预见安卓UI开发方式也将迎来巨变，是时候调研一波了。">
+    <meta name="description" content="老项目维护，最老代码可以追述到十年前！生词本背单词维护至今，除了新功能开发，UI迭代，架构没有特别大的变更。后续引入Rxjava+retrofit，安卓系统高版本适配等几次动静都不大。现在安卓开发MAD已经成熟，Jetpack Compose趋于稳定，是时候来一波大的改造了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Jetpack Compose概览">
-<meta property="og:url" content="https://ficusvirens.com/posts/f0a01d0/index.html">
+<meta property="og:title" content="一个安卓老项目重构计划">
+<meta property="og:url" content="https://ficusvirens.com/posts/f7dab9e4/index.html">
 <meta property="og:site_name" content="gnehz972">
-<meta property="og:description" content="Jetpack Compose是Google在2019年推出的一个现代化UI框架，最近终于进入beta阶段，Google I&#x2F;O 2021透露将在7月发布稳定版。对标iOS Swift UI，可以预见安卓UI开发方式也将迎来巨变，是时候调研一波了。">
+<meta property="og:description" content="老项目维护，最老代码可以追述到十年前！生词本背单词维护至今，除了新功能开发，UI迭代，架构没有特别大的变更。后续引入Rxjava+retrofit，安卓系统高版本适配等几次动静都不大。现在安卓开发MAD已经成熟，Jetpack Compose趋于稳定，是时候来一波大的改造了。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://ficusvirens.com/posts/f0a01d0/jetpack_compose_sample.png">
-<meta property="article:published_time" content="2021-05-24T14:28:47.000Z">
-<meta property="article:modified_time" content="2022-05-05T13:39:07.265Z">
+<meta property="article:published_time" content="2022-09-18T09:28:20.000Z">
+<meta property="article:modified_time" content="2022-09-18T13:12:10.936Z">
 <meta property="article:author" content="gnehz972">
 <meta property="article:tag" content="Android">
-<meta property="article:tag" content="Jetpack Compose">
+<meta property="article:tag" content="Refactor">
+<meta property="article:tag" content="Kotlin">
+<meta property="article:tag" content="MAD">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ficusvirens.com/posts/f0a01d0/jetpack_compose_sample.png">
 
 
-<link rel="canonical" href="https://ficusvirens.com/posts/f0a01d0/">
+<link rel="canonical" href="https://ficusvirens.com/posts/f7dab9e4/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ficusvirens.com/posts/f0a01d0/","path":"posts/f0a01d0/","title":"Jetpack Compose概览"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ficusvirens.com/posts/f7dab9e4/","path":"posts/f7dab9e4/","title":"一个安卓老项目重构计划"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>Jetpack Compose概览 | gnehz972</title>
+<title>一个安卓老项目重构计划 | gnehz972</title>
   
 
 
@@ -112,7 +112,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E5%8D%B0%E8%B1%A1"><span class="nav-number">1.</span> <span class="nav-text">第一印象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pros"><span class="nav-number">2.</span> <span class="nav-text">Pros</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cons"><span class="nav-number">3.</span> <span class="nav-text">Cons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TLDR"><span class="nav-number">4.</span> <span class="nav-text">TLDR</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%B0%E7%8A%B6"><span class="nav-number">1.</span> <span class="nav-text">现状</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%94%B9%E9%80%A0%E8%AE%A1%E5%88%92"><span class="nav-number">2.</span> <span class="nav-text">改造计划</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B8%A9%E5%9D%91-x2F-%E6%94%B6%E8%8E%B7"><span class="nav-number">3.</span> <span class="nav-text">踩坑&#x2F;收获</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -175,7 +175,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://ficusvirens.com/posts/f0a01d0/">
+    <link itemprop="mainEntityOfPage" href="https://ficusvirens.com/posts/f7dab9e4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -188,12 +188,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="Jetpack Compose概览 | gnehz972">
+      <meta itemprop="name" content="一个安卓老项目重构计划 | gnehz972">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Jetpack Compose概览
+          一个安卓老项目重构计划
         </h1>
 
         <div class="post-meta-container">
@@ -203,15 +203,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-05-24 22:28:47" itemprop="dateCreated datePublished" datetime="2021-05-24T22:28:47+08:00">2021-05-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-05-05 21:39:07" itemprop="dateModified" datetime="2022-05-05T21:39:07+08:00">2022-05-05</time>
+      <time title="创建时间：2022-09-18 17:28:20 / 修改时间：21:12:10" itemprop="dateCreated datePublished" datetime="2022-09-18T17:28:20+08:00">2022-09-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -233,33 +227,54 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>Jetpack Compose是Google在2019年推出的一个现代化UI框架，最近终于进入beta阶段，Google I&#x2F;O 2021透露将在7月发布稳定版。对标iOS Swift UI，可以预见安卓UI开发方式也将迎来巨变，是时候调研一波了。</p>
+        <p>老项目维护，最老代码可以追述到十年前！生词本背单词维护至今，除了新功能开发，UI迭代，架构没有特别大的变更。后续引入Rxjava+retrofit，安卓系统高版本适配等几次动静都不大。现在安卓开发MAD已经成熟，Jetpack Compose趋于稳定，是时候来一波大的改造了。</p>
 <span id="more"></span>
 
-<h3 id="第一印象"><a href="#第一印象" class="headerlink" title="第一印象"></a>第一印象</h3><p><img src="/posts/f0a01d0/jetpack_compose_sample.png"><br>以上是官网首页的代码片段，用一个方法实现了一个带图片和动画的卡片。满满的flutter&#x2F;swift UI既视感，熟悉的嵌套，熟悉的kotlin的lambda表达式，第一印象，熟悉，简洁！</p>
-<p>再一看，几行代码涵盖了layout，style，animation，image asset，state处理这些UI基本元素，UI用到的元素都有了，可以实战了。框架完成度，高！</p>
-<p>把一个Kotlin方法加上@Composable注解，就是一个compose方法了。多个compose方法嵌套组合下，就可以实现复杂的UI，compose&#x3D;组合。注解隐藏了实现细节，使用者可以更加focus在UI本身的实现上了。</p>
-<h3 id="Pros"><a href="#Pros" class="headerlink" title="Pros"></a>Pros</h3><ul>
-<li>Declarative programing，声明式的写法，学过React&#x2F;Flutter&#x2F;Swift UI的同学应该很熟悉。Learn once，apply everywhere，棒！(其实Android的databinding框架，已经让我们体验了类似的写法。单独看xml layout，这是是一个declarative的ui，描述了页面的样式，databinding注入状态，状态变化时会触发UI更新。从结果看就是一种declarative programing的写法(伪。。)</li>
-<li>基于Kotlin，pure code UI implementation。Kotlin的语法糖还是很香的。没有了koltin&#x2F;java+xml ui，ui代码全部用kotlin code实现，降低了复杂度。同样的，UI规则更加纯粹，相信以后机器就可以更好的自动生成UI代码了。参考Adobe xd的flutter插件，设计⇒代码，so easy！</li>
-<li>Open source，吸收各方优点。当然，闭源的swift ui搞的也不错，目前进度和质量都领先于compose，已经是生产环境新APP的UI标配了。</li>
-<li>Multi-platform<ul>
-<li><a target="_blank" rel="noopener" href="https://www.jetbrains.com/lp/compose/">Compse for Desktop</a></li>
-<li><a target="_blank" rel="noopener" href="https://compose-web.ui.pages.jetbrains.team/">Compose for Web</a></li>
+<h2 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h2><ul>
+<li>大部分是Java代码</li>
+<li>RxJava and Hndler处理异步任务</li>
+<li>使用AppCompat theme</li>
+<li>使用sqlite helper及raw sql封装数据库调用</li>
+<li>大量分散的shared preference用户设置, 没有归类和类型检查</li>
+<li>Intent传值比较多，没有类型检查</li>
+</ul>
+<h2 id="改造计划"><a href="#改造计划" class="headerlink" title="改造计划"></a>改造计划</h2><ul>
+<li><input checked="" disabled="" type="checkbox"> AppCompat theme -&gt; MD3<ul>
+<li><input checked="" disabled="" type="checkbox"> 切换到md3</li>
+<li><input checked="" disabled="" type="checkbox"> 主页面tab切换到BottomNavigationView+ViewPager2</li>
 </ul>
 </li>
-<li>View interop, 可以在原有的view里包裹compose，也可以在compose中嵌套原来的view。同样的，UI之外的框架也可以复用，比如viewmodel，livedata，coroutines。老项目也可以使用最新的UI框架，兼容性高。</li>
-<li>Decouple from OS, 对android系统版本没有要求，而swift UI需要iOS 13+系统要求。意味着我们用compose写的代码可以运行在任意版本的android系统上。</li>
+<li><input disabled="" type="checkbox"> xml ui -&gt; Jetpack Compose <ul>
+<li><input disabled="" type="checkbox"> 部分页面切换到compose</li>
 </ul>
-<h3 id="Cons"><a href="#Cons" class="headerlink" title="Cons"></a>Cons</h3><ul>
-<li>Performance concern：compose方法可能会调用很频繁，最频繁的时候没一帧都会调用。这中间可能会有很多的计算，也可能会有很多中间调用产生的小对象。参考flutter widget，这些对象回收可能会产生额外的耗费。</li>
-<li>UI组件少：全新的UI框架，原生和三方的UI组件都很欠缺，成熟度还有待考证。</li>
-<li>嵌套问题：复杂UI页面，UI嵌套不可避免，嵌套的代码需要很好的组织和管理，可以从flutter，react吸取点经验。</li>
+</li>
+<li><input disabled="" type="checkbox"> Navigation component<ul>
+<li><input disabled="" type="checkbox"> Navigation link</li>
+<li><input disabled="" type="checkbox"> 使用Safe argument做传值数据类型检查</li>
 </ul>
-<h3 id="TLDR"><a href="#TLDR" class="headerlink" title="TLDR"></a>TLDR</h3><ul>
-<li>基于kotlin，和原生view和框架可以无缝对接。  </li>
-<li>一个跨平台（Android&#x2F;Web&#x2F;Desktop）UI框架。  </li>
-<li>一个开源的，吸取众家之长的UI框架，值得期待。</li>
+</li>
+<li><input checked="" disabled="" type="checkbox"> Java -&gt; Kotlin</li>
+<li><input checked="" disabled="" type="checkbox"> 引入Kotlin coroutine</li>
+<li><input checked="" disabled="" type="checkbox"> 引入Hilt注入框架</li>
+<li><input checked="" disabled="" type="checkbox"> 采用mvvm, viewmodel + Coroutine flow + Livedata</li>
+<li><input disabled="" type="checkbox"> raw sql -&gt; Room<ul>
+<li><input checked="" disabled="" type="checkbox"> new table schema</li>
+<li><input disabled="" type="checkbox"> db migration<ul>
+<li><input disabled="" type="checkbox"> 多个相同schema的table合成一个table</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><input disabled="" type="checkbox"> Shared preference -&gt; DataStore<ul>
+<li><input disabled="" type="checkbox"> Proto DataStore + Coroutine + LiveData封装成可以监听的有类型检查的LiveData</li>
+<li><input disabled="" type="checkbox"> 用户legacy preference setting migration</li>
+</ul>
+</li>
+</ul>
+<h2 id="踩坑-x2F-收获"><a href="#踩坑-x2F-收获" class="headerlink" title="踩坑&#x2F;收获"></a>踩坑&#x2F;收获</h2><ul>
+<li>Room不支持动态table name，相同scehma的table只能有一个。之前一个生词本一张table存储，现在需要合并到同一个table。</li>
+<li>想一步到位迁移到StateFlow，发现使用上有点复杂。Flow没有Android和Lifecircle概念的，需要使用特殊的collect去处理多次触发stream，不能自动unsubscribe等问题。考虑到Sunflower这个Google自己的示范archetechure的库还在使用Livedata，考虑暂时使用Flow+Livedata结合的方式。在repo以及更底层使用Flow，Viewmodel中使用asLivedata()将flow转换为Livedata，UI层去observe Livedata以更新UI。</li>
+<li>自己坑最致命，看十年前代码很是酸爽！</li>
 </ul>
 
     </div>
@@ -271,21 +286,20 @@
     <footer class="post-footer">
           <div class="post-tags">
               <a href="/tags/Android/" rel="tag"># Android</a>
-              <a href="/tags/Jetpack-Compose/" rel="tag"># Jetpack Compose</a>
+              <a href="/tags/Refactor/" rel="tag"># Refactor</a>
+              <a href="/tags/Kotlin/" rel="tag"># Kotlin</a>
+              <a href="/tags/MAD/" rel="tag"># MAD</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/8342713/" rel="prev" title="极简Flutter学习笔记">
-                  <i class="fa fa-chevron-left"></i> 极简Flutter学习笔记
+                <a href="/posts/dd496f02/" rel="prev" title="给媳妇儿做项目之OA排班表">
+                  <i class="fa fa-chevron-left"></i> 给媳妇儿做项目之OA排班表
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/dd496f02/" rel="next" title="给媳妇儿做项目之OA排班表">
-                  给媳妇儿做项目之OA排班表 <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
