@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
-  <link rel="mask-icon" href="/favicon.ico" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"ficusvirens.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ficusvirens.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="最近想研究下竞品app的页面，想在真机上使用hierarchyviewer工具看看，再dump数据库看看(刚升级sdk build tool到28，hierarchyviewer已经被移除了。。老实用studio上的view inspector吧)。竞品是release包，手上也没有root机器，怎么办呢，想起以前debug开发机的便利，果断刷机。手上正好有个nexus 6p，完全可以自己编译ao">
 <meta property="og:type" content="article">
@@ -37,12 +37,14 @@
 <link rel="canonical" href="https://ficusvirens.com/posts/c3525f2d/">
 
 
-
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ficusvirens.com/posts/c3525f2d/","path":"posts/c3525f2d/","title":"编译aosp源码，刷user-debug开发机之nexus 6p"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>编译aosp源码，刷user-debug开发机之nexus 6p | gnehz972</title>
   
+
+
+
 
 
 
@@ -54,12 +56,12 @@
 <link rel="alternate" href="/atom.xml" title="gnehz972" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
     </div>
@@ -75,7 +77,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
   </div>
 </div>
@@ -86,15 +88,9 @@
 
 
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -115,52 +111,40 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">gnehz972</p>
   <div class="site-description" itemprop="description">Android, Python, H5 technology study and share</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
 
-
-
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -230,24 +214,23 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <p>最近想研究下竞品app的页面，想在真机上使用hierarchyviewer工具看看，再dump数据库看看(刚升级sdk build tool到28，hierarchyviewer已经被移除了。。老实用studio上的view inspector吧)。竞品是release包，手上也没有root机器，怎么办呢，想起以前debug开发机的便利，果断刷机。手上正好有个nexus 6p，完全可以自己编译aosp源码，刷个user-debug的开发机。系统都可以debug，装在上面app就随便揉捏了。</p>
+    <div class="post-body" itemprop="articleBody"><p>最近想研究下竞品app的页面，想在真机上使用hierarchyviewer工具看看，再dump数据库看看(刚升级sdk build tool到28，hierarchyviewer已经被移除了。。老实用studio上的view inspector吧)。竞品是release包，手上也没有root机器，怎么办呢，想起以前debug开发机的便利，果断刷机。手上正好有个nexus 6p，完全可以自己编译aosp源码，刷个user-debug的开发机。系统都可以debug，装在上面app就随便揉捏了。</p>
 <span id="more"></span>
 
 <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><ol>
 <li>Ubuntu 18.04.1 LTS   </li>
 <li>笔记本(4核i5,8G内存，256G ssd)预留空余磁盘160G以上，源码加编译结果占用了148G，open-jdk8环境</li>
 <li>手机nexus 6p (angler)  </li>
-<li>访问google的能力  <a target="_blank" rel="noopener" href="https://source.android.com/setup/build/requirements">https://source.android.com/setup/build/requirements</a></li>
+<li>访问google的能力  <a href="https://source.android.com/setup/build/requirements">https://source.android.com/setup/build/requirements</a></li>
 </ol>
 <h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><ol>
-<li><p>下载repo<br><a target="_blank" rel="noopener" href="https://source.android.com/setup/build/downloading">https://source.android.com/setup/build/downloading</a></p>
+<li><p>下载repo<br><a href="https://source.android.com/setup/build/downloading">https://source.android.com/setup/build/downloading</a></p>
 </li>
 <li><p>下载源码<br>注意手机支持的分支,直接检出  </p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">repo init -u https://android.googlesource.com/platform/manifest -b android-8.1.0_r47</span><br><span class="line">repo sync -j4</span><br></pre></td></tr></table></figure>
 <p>  查看repo当前检出分支<br>  git –git-dir .repo&#x2F;manifests&#x2F;.git&#x2F; branch -a<br>  失败了不要紧，重新sync就好，之前下载的有缓存不会重头开始的</p>
 </li>
-<li><p>下二进制文件（vendor的驱动）<br>注意驱动对应的build number，而build bumber和之前检出的分支对应 <strong>OPM7.181005.003	android-8.1.0_r47</strong><br>对应关系查看<a target="_blank" rel="noopener" href="https://source.android.com/setup/start/build-numbers">https://source.android.com/setup/start/build-numbers</a><br>华为的和高通的两个文件都要下载 解压后运行对应的sh文件，会在aosp的根目录生成vendor目录<br>下载地址：<a target="_blank" rel="noopener" href="https://developers.google.com/android/drivers">https://developers.google.com/android/drivers</a></p>
+<li><p>下二进制文件（vendor的驱动）<br>注意驱动对应的build number，而build bumber和之前检出的分支对应 <strong>OPM7.181005.003	android-8.1.0_r47</strong><br>对应关系查看<a href="https://source.android.com/setup/start/build-numbers">https://source.android.com/setup/start/build-numbers</a><br>华为的和高通的两个文件都要下载 解压后运行对应的sh文件，会在aosp的根目录生成vendor目录<br>下载地址：<a href="https://developers.google.com/android/drivers">https://developers.google.com/android/drivers</a></p>
 </li>
 <li><p>改环境,使用openjdk</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64 </span><br><span class="line">export JRE_HOME=$JAVA_HOME/jre </span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib </span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH </span><br><span class="line">export LC_ALL=C</span><br></pre></td></tr></table></figure></li>
@@ -258,7 +241,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export ANDROID_PRODUCT_OUT=your-aosp-path/out/target/product/angler </span><br><span class="line">fastboot flashall -w</span><br></pre></td></tr></table></figure></li>
 </ol>
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><ol>
-<li><p>ninja: build stopped: subcommand failed ninja failed with: exit status 1<br>解决：可能是本地环境问题 export LC_ALL&#x3D;C<br>ref：<a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/51324238/aosp-build-stopped-subcommand-failedhttps://www.programering.com/a/MDM3UzNwATQ.html">https://stackoverflow.com/questions/51324238/aosp-build-stopped-subcommand-failedhttps://www.programering.com/a/MDM3UzNwATQ.html</a> </p>
+<li><p>ninja: build stopped: subcommand failed ninja failed with: exit status 1<br>解决：可能是本地环境问题 export LC_ALL&#x3D;C<br>ref：<a href="https://stackoverflow.com/questions/51324238/aosp-build-stopped-subcommand-failedhttps://www.programering.com/a/MDM3UzNwATQ.html">https://stackoverflow.com/questions/51324238/aosp-build-stopped-subcommand-failedhttps://www.programering.com/a/MDM3UzNwATQ.html</a> </p>
 <blockquote>
 <p>LC_ALL&#x3D;C is to remove all localized settings, make the correct execution.</p>
 </blockquote>
@@ -268,7 +251,7 @@
 <p>sudo apt-get install libxml2-utils</p>
 </blockquote>
 </li>
-<li><p>Build with Jack …. Out of memory error GC overhead limit exceeded. Try increasing heap size with java option ‘-Xmx’.<br>解决：修改jack-server的配置文件ref：<a target="_blank" rel="noopener" href="http://www.2net.co.uk/blog/jack-server.html">http://www.2net.co.uk/blog/jack-server.html</a></p>
+<li><p>Build with Jack …. Out of memory error GC overhead limit exceeded. Try increasing heap size with java option ‘-Xmx’.<br>解决：修改jack-server的配置文件ref：<a href="http://www.2net.co.uk/blog/jack-server.html">http://www.2net.co.uk/blog/jack-server.html</a></p>
 <blockquote>
 <p>vim ~&#x2F;.jack-settings<br>添加一行：<br>JACK_SERVER_VM_ARGUMENTS&#x3D;”-Dfile.encoding&#x3D;UTF-8 -XX:+TieredCompilation -Xmx4096m”<br>重启下jack-server:<br>prebuilts&#x2F;sdk&#x2F;tools&#x2F;jack-admin kill-server<br>prebuilts&#x2F;sdk&#x2F;tools&#x2F;jack-admin start-server</p>
 </blockquote>
@@ -299,12 +282,12 @@
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/posts/ec789f13/" rel="prev" title="kotlin coroutines学习摘要">
-                  <i class="fa fa-chevron-left"></i> kotlin coroutines学习摘要
+                  <i class="fa fa-angle-left"></i> kotlin coroutines学习摘要
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/posts/8342713/" rel="next" title="极简Flutter学习笔记">
-                  极简Flutter学习笔记 <i class="fa fa-chevron-right"></i>
+                  极简Flutter学习笔记 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -323,26 +306,43 @@
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">gnehz972</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">gnehz972</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
 
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
 
 
 

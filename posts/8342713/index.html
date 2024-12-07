@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
-  <link rel="mask-icon" href="/favicon.ico" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"ficusvirens.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ficusvirens.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="极简flutter学习笔记">
 <meta property="og:type" content="article">
@@ -37,12 +37,14 @@
 <link rel="canonical" href="https://ficusvirens.com/posts/8342713/">
 
 
-
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ficusvirens.com/posts/8342713/","path":"posts/8342713/","title":"极简Flutter学习笔记"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>极简Flutter学习笔记 | gnehz972</title>
   
+
+
+
 
 
 
@@ -54,12 +56,12 @@
 <link rel="alternate" href="/atom.xml" title="gnehz972" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
     </div>
@@ -75,7 +77,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
   </div>
 </div>
@@ -86,15 +88,9 @@
 
 
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -115,52 +111,40 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">gnehz972</p>
   <div class="site-description" itemprop="description">Android, Python, H5 technology study and share</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
 
-
-
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -230,13 +214,12 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <p>极简flutter学习笔记</p>
+    <div class="post-body" itemprop="articleBody"><p>极简flutter学习笔记</p>
 <span id="more"></span>
 
 <h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
-<li>支持热更新（hotfix，打patch）吗 <a target="_blank" rel="noopener" href="https://github.com/flutter/flutter/issues/14330">issue</a></li>
-<li>AndroidX support <a target="_blank" rel="noopener" href="https://github.com/flutter/flutter/issues/23586">issue</a></li>
+<li>支持热更新（hotfix，打patch）吗 <a href="https://github.com/flutter/flutter/issues/14330">issue</a></li>
+<li>AndroidX support <a href="https://github.com/flutter/flutter/issues/23586">issue</a></li>
 </ol>
 <h2 id="下载安装flutter-sdk，配置环境变量"><a href="#下载安装flutter-sdk，配置环境变量" class="headerlink" title="下载安装flutter sdk，配置环境变量"></a>下载安装flutter sdk，配置环境变量</h2><ol>
 <li>下载解压flutter sdk，将对应bin目录（xxx&#x2F;flutter&#x2F;bin）加入PATH环境变量</li>
@@ -247,23 +230,23 @@
 <li>查看版本：flutter –version</li>
 </ul>
 </li>
-<li>android studio：安装Dart和Flutter插件，重启，创建flutter应用，run，hot reload <a target="_blank" rel="noopener" href="https://flutter.dev/docs/development/tools/android-studio">链接</a></li>
-<li>vscode：安装Dart和Flutter扩展,创建应用（Ctrl+Shift+P查看-&gt;命令面板-&gt;Flutter:New Project）,run（Shift+F9）,hot reload <a target="_blank" rel="noopener" href="https://flutter.dev/docs/development/tools/vs-code">链接</a></li>
-<li><a target="_blank" rel="noopener" href="https://flutter.dev/docs/get-started/install/linux">官方链接</a></li>
+<li>android studio：安装Dart和Flutter插件，重启，创建flutter应用，run，hot reload <a href="https://flutter.dev/docs/development/tools/android-studio">链接</a></li>
+<li>vscode：安装Dart和Flutter扩展,创建应用（Ctrl+Shift+P查看-&gt;命令面板-&gt;Flutter:New Project）,run（Shift+F9）,hot reload <a href="https://flutter.dev/docs/development/tools/vs-code">链接</a></li>
+<li><a href="https://flutter.dev/docs/get-started/install/linux">官方链接</a></li>
 </ol>
 <h2 id="在现有的native-app里集成flutter组件"><a href="#在现有的native-app里集成flutter组件" class="headerlink" title="在现有的native app里集成flutter组件"></a>在现有的native app里集成flutter组件</h2><ol>
 <li>app主体部分是native开发，部分feature采用flutter，见闲鱼的详情页</li>
 <li>flutter sdk提供FlutterFragment，里面包含一个FlutterView，flutter代码就跑在这个容器里</li>
 <li>native客户端传一个String类型的route到flutter组件，flutter组件的main入口处理分发，以导航到flutter实现的不同页面</li>
-<li>native和flutter相互调用，传值  <a target="_blank" rel="noopener" href="https://medium.com/flutter-io/flutter-platform-channels-ce7f540a104e">链接</a><ul>
+<li>native和flutter相互调用，传值  <a href="https://medium.com/flutter-io/flutter-platform-channels-ce7f540a104e">链接</a><ul>
 <li>MethodChannel 方法直接调用，双向</li>
 <li>EventChannel 事件监听，native发，flutter收</li>
 </ul>
 </li>
-<li><a target="_blank" rel="noopener" href="https://github.com/flutter/flutter/wiki/Add-Flutter-to-existing-apps">官方链接</a></li>
+<li><a href="https://github.com/flutter/flutter/wiki/Add-Flutter-to-existing-apps">官方链接</a></li>
 </ol>
 <h2 id="dart基础语法学习"><a href="#dart基础语法学习" class="headerlink" title="dart基础语法学习"></a>dart基础语法学习</h2><ul>
-<li><a target="_blank" rel="noopener" href="http://dart.goodev.org/guides/language/language-tour">链接</a></li>
+<li><a href="http://dart.goodev.org/guides/language/language-tour">链接</a></li>
 </ul>
 <h2 id="工程基本结构，yaml配置构建"><a href="#工程基本结构，yaml配置构建" class="headerlink" title="工程基本结构，yaml配置构建"></a>工程基本结构，yaml配置构建</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">├── android  //生成的android包装工程</span><br><span class="line">├── build   //编译中间文件存放位置</span><br><span class="line">├── ios    //生成的ios包装工程</span><br><span class="line">├── lib</span><br><span class="line">│   ├── main.dart  //flutter程序入口</span><br><span class="line">│   └── second.dart</span><br><span class="line">├── pubspec.lock   //解析包依赖配置文件后，将满足条件的包依赖存放在该文件，工程实际上使用的该文件内容里的配置</span><br><span class="line">├── pubspec.yaml   //包依赖配置文件，三方包放dependencies下面</span><br><span class="line">├── README.md</span><br><span class="line">└── test</span><br><span class="line">    └── widget_test.dart</span><br></pre></td></tr></table></figure>
 
@@ -280,9 +263,9 @@
 <li><input disabled="" type="checkbox"> 工程化管理框架，开发范式</li>
 </ul>
 <h2 id="学习资源"><a href="#学习资源" class="headerlink" title="学习资源"></a>学习资源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/Solido/awesome-flutter">awesome-flutter</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/flutterchina/flutter-in-action">flutter-in-action</a></li>
-<li><a target="_blank" rel="noopener" href="https://github.com/alibaba/fish-redux">阿里咸鱼框架fish-redux</a></li>
+<li><a href="https://github.com/Solido/awesome-flutter">awesome-flutter</a></li>
+<li><a href="https://github.com/flutterchina/flutter-in-action">flutter-in-action</a></li>
+<li><a href="https://github.com/alibaba/fish-redux">阿里咸鱼框架fish-redux</a></li>
 </ul>
 
     </div>
@@ -302,12 +285,12 @@
           <div class="post-nav">
             <div class="post-nav-item">
                 <a href="/posts/c3525f2d/" rel="prev" title="编译aosp源码，刷user-debug开发机之nexus 6p">
-                  <i class="fa fa-chevron-left"></i> 编译aosp源码，刷user-debug开发机之nexus 6p
+                  <i class="fa fa-angle-left"></i> 编译aosp源码，刷user-debug开发机之nexus 6p
                 </a>
             </div>
             <div class="post-nav-item">
                 <a href="/posts/f0a01d0/" rel="next" title="Jetpack Compose概览">
-                  Jetpack Compose概览 <i class="fa fa-chevron-right"></i>
+                  Jetpack Compose概览 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -326,26 +309,43 @@
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">gnehz972</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">gnehz972</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
 
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
 
 
 

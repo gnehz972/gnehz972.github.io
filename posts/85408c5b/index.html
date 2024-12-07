@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.2">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
 
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico">
-  <link rel="mask-icon" href="/favicon.ico" color="#222">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
 <link rel="stylesheet" href="/css/main.css">
 
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha256-5eIC48iZUHmSlSUz9XtjRyK2mzQkHScZY1WdMaoz74E=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"ficusvirens.com","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.11.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"ficusvirens.com","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.21.1","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"copycode":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
     <meta name="description" content="概述使用github page + hexo搭建博客最佳实践。md文件和生成的博客网站文件分开管理，推送到各自的仓库保存。三步即可完成博客创建到发布并留档。  hexo new &quot;new blog title&quot; 写md文件 hexo g -d 生成静态博客网站文件并部署到github page git commit -am &quot;save&quot; &amp;&amp;">
 <meta property="og:type" content="article">
@@ -41,12 +41,14 @@
 <link rel="canonical" href="https://ficusvirens.com/posts/85408c5b/">
 
 
-
 <script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://ficusvirens.com/posts/85408c5b/","path":"posts/85408c5b/","title":"使用github page搭建hexo博客最佳实践"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
 <title>使用github page搭建hexo博客最佳实践 | gnehz972</title>
   
+
+
+
 
 
 
@@ -58,12 +60,12 @@
 <link rel="alternate" href="/atom.xml" title="gnehz972" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
 
   <main class="main">
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
   <div class="site-nav-toggle">
     <div class="toggle" aria-label="切换导航栏" role="button">
     </div>
@@ -79,7 +81,7 @@
   </div>
 
   <div class="site-nav-right">
-    <div class="toggle popup-trigger">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
     </div>
   </div>
 </div>
@@ -90,15 +92,9 @@
 
 
 
-</div>
+</header>
         
   
-  <div class="toggle sidebar-toggle" role="button">
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-    <span class="toggle-line"></span>
-  </div>
-
   <aside class="sidebar">
 
     <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
@@ -119,52 +115,40 @@
         <!--/noindex-->
 
         <div class="site-overview-wrap sidebar-panel">
-          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
   <p class="site-author-name" itemprop="name">gnehz972</p>
   <div class="site-description" itemprop="description">Android, Python, H5 technology study and share</div>
 </div>
-<div class="site-state-wrap site-overview-item animated">
+<div class="site-state-wrap animated">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
           <a href="/categories/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">20</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
 
-
-
         </div>
       </div>
     </div>
-  </aside>
-  <div class="sidebar-dimmer"></div>
-
-
-    </header>
 
     
-  <div class="back-to-top" role="button" aria-label="返回顶部">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
+  </aside>
 
-<noscript>
-  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
-</noscript>
 
+    </div>
 
     <div class="main-inner post posts-expand">
 
@@ -234,8 +218,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody">
-        <h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>使用github page + hexo搭建博客最佳实践。md文件和生成的博客网站文件分开管理，推送到各自的仓库保存。三步即可完成博客创建到发布并留档。</p>
+    <div class="post-body" itemprop="articleBody"><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><p>使用github page + hexo搭建博客最佳实践。md文件和生成的博客网站文件分开管理，推送到各自的仓库保存。三步即可完成博客创建到发布并留档。</p>
 <ol>
 <li><code>hexo new &quot;new blog title&quot;</code> 写md文件</li>
 <li><code>hexo g -d</code> 生成静态博客网站文件并部署到github page</li>
@@ -248,10 +231,10 @@
 <li>Hexo-cli</li>
 </ul>
 <h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ol>
-<li>安装NodeJs <a target="_blank" rel="noopener" href="https://nodejs.org/zh-cn/download/">NodeJs官网下载</a></li>
+<li>安装NodeJs <a href="https://nodejs.org/zh-cn/download/">NodeJs官网下载</a></li>
 <li>安装hexo-cli  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
-<li>创建一个普通 <a target="_blank" rel="noopener" href="https://github.com/gnehz972/hexoblog">github repo</a> 用来放md原始文件</li>
-<li>创建github page repo，用来放生成的静态网页文件 <a target="_blank" rel="noopener" href="https://pages.github.com/">github page</a><blockquote>
+<li>创建一个普通 <a href="https://github.com/gnehz972/hexoblog">github repo</a> 用来放md原始文件</li>
+<li>创建github page repo，用来放生成的静态网页文件 <a href="https://pages.github.com/">github page</a><blockquote>
 <p>注意repo name必须为你的用户名＋.github.io(<em>eg: gnehz972.github.io</em>)<br><img src="/posts/85408c5b/githubio_repo.webp" alt="image.png"></p>
 </blockquote>
 </li>
@@ -265,15 +248,15 @@
 </li>
 <li>将md文件转换成静态网页文件，生成的网页文件位于.&#x2F;public&#x2F;目录下<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure></li>
 <li>本地预览网页<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-可以看到以下信息，在浏览器访问<a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> 即可看到新建的博客页面<blockquote>
-<p>INFO  Validating config<br>INFO  Start processing<br>INFO  Hexo is running at <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000/</a> . Press Ctrl+C to stop.</p>
+可以看到以下信息，在浏览器访问<a href="http://localhost:4000/">http://localhost:4000/</a> 即可看到新建的博客页面<blockquote>
+<p>INFO  Validating config<br>INFO  Start processing<br>INFO  Hexo is running at <a href="http://localhost:4000/">http://localhost:4000/</a> . Press Ctrl+C to stop.</p>
 </blockquote>
 </li>
 </ol>
 <h4 id="部署博客静态网页到github-page"><a href="#部署博客静态网页到github-page" class="headerlink" title="部署博客静态网页到github page"></a>部署博客静态网页到github page</h4><ol>
 <li>修改配置文件_config.yml，配置部署信息。这里配之前创建的github page repo信息<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https://github.com/gnehz972/gnehz972.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure></li>
 <li>部署到github page<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure></li>
-<li>验证部署，访问 <a target="_blank" rel="noopener" href="https://gnehz972.github.io/">https://gnehz972.github.io/</a></li>
+<li>验证部署，访问 <a href="https://gnehz972.github.io/">https://gnehz972.github.io/</a></li>
 </ol>
 <h4 id="md源文件管理"><a href="#md源文件管理" class="headerlink" title="md源文件管理"></a>md源文件管理</h4><ol>
 <li>将hexoblog工程push到github即可<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cd hexoblog</span><br><span class="line">git init </span><br><span class="line">git remote add origin https://github.com/gnehz972/hexoblog.git</span><br><span class="line">git add .</span><br><span class="line">git commit  -am &quot;init repo&quot;</span><br><span class="line">git push -u origin master </span><br></pre></td></tr></table></figure></li>
@@ -304,7 +287,7 @@
             </div>
             <div class="post-nav-item">
                 <a href="/posts/58ea93b5/" rel="next" title="Vim常用快捷键">
-                  Vim常用快捷键 <i class="fa fa-chevron-right"></i>
+                  Vim常用快捷键 <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
@@ -323,26 +306,43 @@
   <footer class="footer">
     <div class="footer-inner">
 
-
-<div class="copyright">
-  &copy; 
-  <span itemprop="copyrightYear">2022</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">gnehz972</span>
-</div>
-  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">gnehz972</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
 
     </div>
   </footer>
 
   
-  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
 
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/sidebar.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
 
 
 

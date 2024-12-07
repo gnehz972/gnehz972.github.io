@@ -2,10 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ficusvirens.com/posts/3a9d928e/</loc>
+    
+    <lastmod>2024-12-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://ficusvirens.com/posts/dd496f02/</loc>
     
     <lastmod>2022-09-18</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -13,6 +24,8 @@
     
     <lastmod>2022-09-18</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -20,6 +33,8 @@
     
     <lastmod>2022-05-07</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -27,6 +42,8 @@
     
     <lastmod>2022-05-05</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -34,6 +51,8 @@
     
     <lastmod>2022-05-05</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -41,6 +60,8 @@
     
     <lastmod>2022-05-05</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -48,6 +69,8 @@
     
     <lastmod>2022-05-05</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -55,6 +78,8 @@
     
     <lastmod>2022-05-05</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -62,6 +87,8 @@
     
     <lastmod>2022-05-05</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -69,6 +96,8 @@
     
     <lastmod>2022-05-05</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -76,6 +105,8 @@
     
     <lastmod>2022-05-05</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -83,6 +114,8 @@
     
     <lastmod>2022-05-05</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -90,6 +123,8 @@
     
     <lastmod>2022-05-05</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
   <url>
@@ -97,12 +132,14 @@
     
     <lastmod>2022-05-05</lastmod>
     
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   
 
   <url>
     <loc>https://ficusvirens.com/</loc>
-    <lastmod>2022-09-18</lastmod>
+    <lastmod>2024-12-07</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -110,186 +147,207 @@
   
   <url>
     <loc>https://ficusvirens.com/tags/Android/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/tools/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/Jetpack-Compose/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/vim/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/kotlin/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/language/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/kotlin-coroutine/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/hexo/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/h5/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/blog/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/flutter/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/dart/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/%E5%88%B7%E6%9C%BA/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/aosp/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/Refactor/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/Kotlin/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/MAD/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/NextJs/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/Mongodb/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/tags/Typescript/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/tags/AI/</loc>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/tags/GraphQL/</loc>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
 
   
   <url>
     <loc>https://ficusvirens.com/categories/tools/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/categories/Android/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/categories/kotlin/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/categories/flutter/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/categories/android/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://ficusvirens.com/categories/Web/</loc>
-    <lastmod>2022-09-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://ficusvirens.com/categories/Language/</loc>
+    <lastmod>2024-12-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
   </url>
   
 </urlset>
