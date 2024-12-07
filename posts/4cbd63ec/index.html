@@ -218,38 +218,79 @@
 <span id="more"></span>
 <h2 id="adb"><a href="#adb" class="headerlink" title="adb"></a>adb</h2><ul>
 <li>查看屏幕尺寸&#x2F;density<br><code>adb shell wm size/density</code></li>
-<li>查看应用启动时间<br><code>adb shell am start -W -n &quot;packagename/absoluteMainActivityname&quot;</code></li>
-<li>查看当前focused Activity<br> <code>adb shell dumpsys activity activities|grep -i focus</code></li>
+<li>查看应用启动时间</li>
+</ul>
+<p><code>adb shell am start -W -n &quot;packagename/absoluteMainActivityname&quot;</code></p>
+<ul>
+<li>查看当前focused Activity</li>
+</ul>
+<p> <code>adb shell dumpsys activity activities|grep -i focus</code></p>
+<ul>
 <li>设置log tag level<br><code>adb shell setprop log.tag.Email VERBOSE</code></li>
-<li>dump应用内存占用<br><code>adb shell dumpsys meminfo packagename</code></li>
-<li>查看包信息<br> <code>adb shell dumpsys package packagename</code></li>
-<li>输入文字<br> <code>adb shell input text &quot;dddd&quot;</code></li>
+<li>dump应用内存占用</li>
+</ul>
+<p><code>adb shell dumpsys meminfo packagename</code></p>
+<ul>
+<li>查看包信息</li>
+</ul>
+<p> <code>adb shell dumpsys package packagename</code></p>
+<ul>
+<li>输入文字</li>
+</ul>
+<p> <code>adb shell input text &quot;dddd&quot;</code></p>
+<ul>
 <li>查看包安装路径<br><code>adb shell pm list packages -f |grep Email</code></li>
-<li>跑monkey<br> <code>adb shell monkey  -p com.android.email --throttle 150 -v -s 3500 300000</code></li>
+<li>跑monkey</li>
+</ul>
+<p> <code>adb shell monkey  -p com.android.email --throttle 150 -v -s 3500 300000</code></p>
+<ul>
 <li>查看手机ip<br><code>adb shell netcfg</code></li>
 <li>重新挂载system为rw(root手机刷debug版本系统可行，或者启动一个可以读写的模拟器)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">adb disable-verity</span><br><span class="line">adb reboot</span><br><span class="line">adb root</span><br><span class="line">adb shell mount  //查看挂载点</span><br><span class="line">adb shell mount -o remount,rw  -t ext4  /dev/block/dm-0 /system</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="aapt"><a href="#aapt" class="headerlink" title="aapt"></a>aapt</h2><ul>
-<li>查看apk版本信息<br><code>aapt dump badging app-release.apk</code></li>
-<li>查看apk权限信息<br><code>aapt dump permissions app-release.apk</code></li>
-<li>导出apk string内容<br><code>aapt d --values resources ~/temp/EmailRes.apk &gt;~/temp/email_string.txt</code></li>
+<li>查看apk版本信息</li>
 </ul>
+<p><code>aapt dump badging app-release.apk</code></p>
+<ul>
+<li>查看apk权限信息</li>
+</ul>
+<p><code>aapt dump permissions app-release.apk</code></p>
+<ul>
+<li>导出apk string内容</li>
+</ul>
+<p><code>aapt d --values resources ~/temp/EmailRes.apk &gt;~/temp/email_string.txt</code></p>
 <h2 id="emulator"><a href="#emulator" class="headerlink" title="emulator"></a>emulator</h2><ul>
-<li>列举所有可用模拟器<br><code>emulator -list-avds</code></li>
-<li>启动带shell输出模拟器<br><code>emulator -avd xxx -shell</code></li>
-<li>启动一个可以将&#x2F;system挂载为rw的模拟器<br><code>emulator -avd 3.7_WVGA_Nexus_One_API_23 -writable-system</code></li>
+<li>列举所有可用模拟器</li>
 </ul>
+<p><code>emulator -list-avds</code></p>
+<ul>
+<li>启动带shell输出模拟器</li>
+</ul>
+<p><code>emulator -avd xxx -shell</code></p>
+<ul>
+<li>启动一个可以将&#x2F;system挂载为rw的模拟器</li>
+</ul>
+<p><code>emulator -avd 3.7_WVGA_Nexus_One_API_23 -writable-system</code></p>
 <h2 id="android"><a href="#android" class="headerlink" title="android"></a>android</h2><ul>
-<li>命令行产看可以安装更新的sdk<br><code>android list sdk</code></li>
-<li>服务器中命令行使用代理更新指定SDK(jenkin服务器中可能没有界面)<br><code>android update sdk --no-ui --filter 2 --proxy-host mirrors.neusoft.edu.cn  --proxy-port 80 -s</code></li>
+<li>命令行产看可以安装更新的sdk</li>
 </ul>
+<p><code>android list sdk</code></p>
+<ul>
+<li>服务器中命令行使用代理更新指定SDK(jenkin服务器中可能没有界面)</li>
+</ul>
+<p><code>android update sdk --no-ui --filter 2 --proxy-host mirrors.neusoft.edu.cn  --proxy-port 80 -s</code></p>
 <h2 id="fastboot"><a href="#fastboot" class="headerlink" title="fastboot"></a>fastboot</h2><ul>
 <li>fastboot刷机<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">adb reboot bootloader</span><br><span class="line">fastboot flash boot boot.img</span><br><span class="line">fastboot flash system system.img</span><br><span class="line">fastboot flash userdata userdata.img</span><br><span class="line">fastboot flash custpack custpack.img</span><br><span class="line">fastboot reboot</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h2 id="others"><a href="#others" class="headerlink" title="others"></a>others</h2><ul>
-<li>命令行查看apk签名<br><code>keytool -list -printcert -jarfile app.apk</code></li>
-<li>tcpdump抓包<br><code>/data/local/tcpdump -p -vv -s 0 -w /sdcard/capture.pcap</code><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-w 表示抓取的包保存的文件路径</span><br><span class="line">-v，展示更多的有用信息，还可以用-vv -vvv增加信息的展示量。</span><br><span class="line">-p 将网络接口设置成非混杂模式</span><br></pre></td></tr></table></figure></li>
+<li>命令行查看apk签名</li>
 </ul>
+<p><code>keytool -list -printcert -jarfile app.apk</code></p>
+<ul>
+<li>tcpdump抓包</li>
+</ul>
+<p><code>/data/local/tcpdump -p -vv -s 0 -w /sdcard/capture.pcap</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-w 表示抓取的包保存的文件路径</span><br><span class="line">-v，展示更多的有用信息，还可以用-vv -vvv增加信息的展示量。</span><br><span class="line">-p 将网络接口设置成非混杂模式</span><br></pre></td></tr></table></figure>
 
     </div>
 
