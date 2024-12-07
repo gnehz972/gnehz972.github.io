@@ -11,4 +11,4 @@ Disallow: /css/
 Disallow: /fonts/
 Disallow: /vendors/
 
-Sitemap: https://www.ficusvirens.com/sitemap.xml
+Sitemap: https://gnehz972.github.io/sitemap.xml
