@@ -6,7 +6,7 @@
   <link href="https://gnehz972.github.io/atom.xml" rel="self"/>
   
   <link href="https://gnehz972.github.io/"/>
-  <updated>2024-12-07T03:38:36.226Z</updated>
+  <updated>2024-12-10T14:04:54.912Z</updated>
   <id>https://gnehz972.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Quick read paging3 source code by AI tool</title>
+    <link href="https://gnehz972.github.io/posts/b6e04f0f/"/>
+    <id>https://gnehz972.github.io/posts/b6e04f0f/</id>
+    <published>2024-12-10T13:23:39.000Z</published>
+    <updated>2024-12-10T14:04:54.912Z</updated>
+    
+    <content type="html"><![CDATA[<p>Google NotebookLM is the sharp AI spear, Android Paging3 lib is the tough shield.<br>Let break this shield using the spear to learn.</p><span id="more"></span><h4 id="Context"><a href="#Context" class="headerlink" title="Context"></a>Context</h4><p>Paging3 is a complicate Android lib with a bunch of classes to do the paging stuff, although it hard to understand and use, but we use it for now and need to known the details. The article here introduce a way to read and understand the lib source code quickly by leveraging the AI tool of Google NotebookLM.</p><p>The initial purpose it to understand how the prepend loading is triggered, is it able to manually triggered with flexibility, while dive deep into it, it really deep to follow, lots of classes and concepts is defined to achieve the purpose. NotebookLM come rescue me from the headache.</p><p>By pasting all the source code to it as context, it knowns relationship between classes, it explains concept well. It even draw the nice diagrams with little modified input. And the most detailed and accurate is the explanation of the functions.</p><h4 id="Preparation"><a href="#Preparation" class="headerlink" title="Preparation"></a>Preparation</h4><ol><li>Download all the paging3 source code using <a href="https://downgit.github.io/#/home">https://downgit.github.io/#/home</a><ul><li>Paging3 common lib source code: <a href="https://github.com/androidx/androidx/tree/androidx-main/paging/paging-common/src/commonMain/kotlin/androidx/paging">https://github.com/androidx/androidx/tree/androidx-main/paging/paging-common/src/commonMain/kotlin/androidx/paging</a></li></ul></li><li>Use <code>copy-files-to-clipboard-for-llm</code> plugin to merge all the files and copy to clipboard</li><li>Paste the source code to NotebookLM as the reference source</li><li>Chat with NotebookLM for your need</li></ol><h4 id="Chat-to-learn"><a href="#Chat-to-learn" class="headerlink" title="Chat to learn"></a>Chat to learn</h4><p>Here I will list some core questions to figure out the prepend triggering flow and related concepts defined by the lib.</p><p><img src="/posts/b6e04f0f/q1.png"><br><img src="/posts/b6e04f0f/q2.png"><br><img src="/posts/b6e04f0f/q3.png"><br><img src="/posts/b6e04f0f/q4.png"><br><img src="/posts/b6e04f0f/q5.png"><br><img src="/posts/b6e04f0f/q6-1.png"><br><img src="/posts/b6e04f0f/q6-2.png"><br><img src="/posts/b6e04f0f/q7.png"></p><h4 id="Summerize-diagram"><a href="#Summerize-diagram" class="headerlink" title="Summerize diagram"></a>Summerize diagram</h4><blockquote><p>Q8-1 draw a sequence diagram to present the the flow of prepend loading<br>Q8-2 add LazyPageingItems in the sequence diagra</p></blockquote><pre><code class="highlight mermaid">sequenceDiagramparticipant UIparticipant LazyPagingItemsparticipant PagingDataPresenterparticipant HintReceiverparticipant PageFetcherparticipant PageFetcherSnapshotparticipant PageFetcherSnapshotStateparticipant PagingSourceUI-&gt;&gt;LazyPagingItems: Access item (get)activate UIactivate LazyPagingItemsLazyPagingItems-&gt;&gt;PagingDataPresenter: Get item at index (get)activate PagingDataPresenterPagingDataPresenter-&gt;&gt;PagingDataPresenter: Get item from page storePagingDataPresenter-&gt;&gt;HintReceiver: Access Hint (ViewportHint)deactivate UIactivate HintReceiverHintReceiver-&gt;&gt;PageFetcher: Access Hint (ViewportHint)deactivate HintReceiveractivate PageFetcherPageFetcher-&gt;&gt;PageFetcherSnapshot: Access Hint (ViewportHint)activate PageFetcherSnapshotPageFetcherSnapshot-&gt;&gt;PageFetcherSnapshot: Wrap hint with generationId (GenerationalViewportHint)PageFetcherSnapshot-&gt;&gt;PageFetcherSnapshotState: Get next load key (nextLoadKeyOrNull)activate PageFetcherSnapshotStatePageFetcherSnapshotState--&gt;&gt;PageFetcherSnapshot: Return load keydeactivate PageFetcherSnapshotStatealt Valid load key and prefetch distance not fulfilledPageFetcherSnapshot-&gt;&gt;PagingSource: Load data (load, LoadParams&#123;loadType=PREPEND, key, loadSize&#125;)activate PagingSourcePagingSource-&gt;&gt;PagingSource: Fetch dataPagingSource--&gt;&gt;PageFetcherSnapshot: Load result (LoadResult&#123;Page/Error&#125;)deactivate PagingSourcePageFetcherSnapshot-&gt;&gt;PageFetcherSnapshotState: Insert page, update load state, check for drop (insert)activate PageFetcherSnapshotStatePageFetcherSnapshotState--&gt;&gt;PageFetcherSnapshot: Confirmationdeactivate PageFetcherSnapshotStateelse Load key invalid or prefetch distance fulfilledPageFetcherSnapshot-&gt;&gt;PageFetcherSnapshot: Skip loadenddeactivate PageFetcherSnapshotdeactivate PageFetcherdeactivate PagingDataPresenterLazyPagingItems--&gt;&gt;UI: Return itemdeactivate LazyPagingItems</code></pre><blockquote><p>Q9 draw a class diagram using components in the above sequence diagram</p></blockquote><pre><code class="highlight mermaid">classDiagramclass UIclass LazyPagingItems &#123;-flow: Flow&lt;PagingData&lt;T&gt;&gt;-pagingDataPresenter: PagingDataPresenter&lt;T&gt;+refresh()+loadState: CombinedLoadStates+get(index: Int): T?&#125;class PagingDataPresenter &#123;-hintReceiver: HintReceiver-uiReceiver: UiReceiver-pageStore: PageStore+refresh()+get(index: Int) : T?+addLoadStateListener(listener)+removeLoadStateListener(listener)+presentPagingDataEvent(event: PagingDataEvent)&#125;class HintReceiver &#123;+accessHint(hint: ViewportHint)&#125;class PageFetcher &#123;-snapshot: PageFetcherSnapshot+refresh()&#125;class PageFetcherSnapshot &#123;-pagingSource: PagingSource-stateHolder: PageFetcherSnapshotState.Holder+doLoad(loadType: LoadType, hint: GenerationalViewportHint)+doInitialLoad()&#125;class PageFetcherSnapshotState &#123;-pages: List&lt;TransformablePage&lt;Key, Value&gt;&gt;-placeholdersBefore: Int-placeholdersAfter: Int+insert(generationId: Int, loadType: LoadType, page: Page) : Boolean+nextLoadKeyOrNull(loadType: LoadType, generationId: Int, presentedItemsBeyondAnchor: Int) : Key?&#125;class PagingSource &#123;+load(params: LoadParams) : LoadResult&#125;UI ..&gt; LazyPagingItemsLazyPagingItems *-- PagingDataPresenterPagingDataPresenter ..&gt; HintReceiverHintReceiver ..&gt; PageFetcherPageFetcher *-- PageFetcherSnapshotPageFetcherSnapshot *-- PageFetcherSnapshotStatePageFetcherSnapshot ..&gt; PagingSource</code></pre>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;Google NotebookLM is the sharp AI spear, Android Paging3 lib is the tough shield.&lt;br&gt;Let break this shield using the spear to learn.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Andriod" scheme="https://gnehz972.github.io/categories/Andriod/"/>
+    
+    <category term="AI" scheme="https://gnehz972.github.io/categories/Andriod/AI/"/>
+    
+    
+    <category term="AI" scheme="https://gnehz972.github.io/tags/AI/"/>
+    
+    <category term="NotebookLM" scheme="https://gnehz972.github.io/tags/NotebookLM/"/>
+    
+    <category term="Paging3" scheme="https://gnehz972.github.io/tags/Paging3/"/>
+    
+  </entry>
   
   <entry>
     <title>Quick learn GraphQL basics by asking AI</title>
